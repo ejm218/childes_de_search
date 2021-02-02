@@ -1,4 +1,4 @@
-# SMALLER SEARCH USING ONLY THE LIZHOU CORPUS
+# SMALLER PRACTICE SEARCH USING ONLY THE LIZHOU CORPUS
 import nltk
 from nltk.corpus.reader import CHILDESCorpusReader
 import numpy as np
@@ -42,4 +42,3 @@ succeeds_de_count = Counter(succeeds_de)
 precedes_de_unique = set(precedes_de)
 succeeds_de_unique = set(succeeds_de)
 print(f"In the {len(chi_de_not_final)} non-sentence final utterances, there are {len(precedes_de_unique)} unique items that occur BEFORE 的, and {len(succeeds_de_unique)} unique items that occur AFTER 的.")
-
