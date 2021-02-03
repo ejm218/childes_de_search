@@ -1,4 +1,4 @@
-# SMALLER PRACTICE SEARCH USING ONLY THE LIZHOU CORPUS
+# SMALLER SEARCH USING ONLY THE LIZHOU CORPUS (for practice)
 import nltk
 from nltk.corpus.reader import CHILDESCorpusReader
 import numpy as np

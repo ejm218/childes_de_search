@@ -1,15 +1,9 @@
 import nltk
 from nltk.corpus.reader import CHILDESCorpusReader
 import numpy as np
-corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin")
+corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # be sure to change this if your corpora are located in a different path
+
 # IMPORT THE CORPORA FOR USE IN THE SEARCH
-
-# corpora = ["Chang1", "Chang2", "ChangPlay", "ChangPN", "Erbaugh", "LiZhou", "Tong", "Zhou1", "Zhou2", "Zhou3")
-# for item in corpora:
-  #  item_index = corpora.index(item)
-   # item_name = item
-    #corpora_list[item_index] = CHILDESCorpusReader(corpus_root, str(item_name)+".*.xml")
-
 chang1 = CHILDESCorpusReader(corpus_root, "Chang1/.*.xml")
 chang2 = CHILDESCorpusReader(corpus_root, "Chang2/.*.xml")
 changplay = CHILDESCorpusReader(corpus_root, "ChangPlay/.*.xml")
@@ -38,7 +32,7 @@ total_tagged = total_num_tagged / total_sentences
 print(f"There are {files_sum} files to be evaluated in the list of corpora.")
 print(f"{(total_tagged)*100}% of the target files have been MOR tagged.")
 
-# OTHER PREPARATION
+# CREATING VARIABLES FOR THE TRANSCRIPTS
 chang1_transcripts = chang1.fileids()
 chang2_transcripts = chang2.fileids()
 changplay_transcripts = changplay.fileids()
@@ -59,7 +53,7 @@ exec(functions_file)
 # CREATE A DF CONTAINING ALL INFO FROM ALL CORPORA
 print("Creating a Dataframe...")
 for corpus in corpora:
-    generate_data(corpus) # this returns a dict called child_utterances_data
+    generate_data(corpus) # this returns a dict object called child_utterances_data
 data = create_df(child_utterances_data)
 print(f"Dataframe successfully generated. There are {len(data)} rows and {len(data.columns)} in this Dataframe.")
 
