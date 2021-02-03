@@ -58,20 +58,21 @@ def generate_data(corpus_name):
     succeeding_items = []
     full_utterances = []
     for transcript in transcripts:
-        sentences = corpus_name.sents(transcript, speaker="CHI")
+        sentences = corpus_name.tagged_sents(transcript, speaker="CHI") # each sentence is a list of tuples
         age = corpus_name.age(fileids=transcript, month=True)
         age = age[0]
         for sentence in sentences:
-            if "的" in sentence and sentence[-1] != search_term:
-                chi_de_not_final.append(sentence)
-                child_utterances_data["filename"].append(transcript)
-                child_utterances_data["age"].append(age)
-                de_index = sentence.index(search_term)
-                before_index = int(de_index - 1)
-                after_index = int(de_index + 1)
-                child_utterances_data["preceding_item"].append(sentence[before_index])
-                child_utterances_data["succeeding_item"].append(sentence[after_index])
-                child_utterances_data["full_utterance"].append(sentence)
+            for item in sentence: # each word in the sentence is contained in a tuple where the first item is the word and the second is its MOR tag
+                if search_term in item and sentence[-1] != item:
+                    chi_de_not_final.append(sentence)
+                    child_utterances_data["filename"].append(transcript)
+                    child_utterances_data["age"].append(age)
+                    de_index = sentence.index(item)
+                    before_index = int(de_index - 1)
+                    after_index = int(de_index + 1)
+                    child_utterances_data["preceding_item"].append(sentence[before_index])
+                    child_utterances_data["succeeding_item"].append(sentence[after_index])
+                    child_utterances_data["full_utterance"].append(sentence)
 
 # THIS FUNCTION CREATES A DATAFRAME IN PANDAS FROM A GIVEN DICTIONARY (e.g. the one created with the function defined above)
 def create_df(source_dict):
