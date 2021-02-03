@@ -73,7 +73,7 @@ def generate_data(corpus_name):
                 child_utterances_data["succeeding_item"].append(sentence[after_index])
                 child_utterances_data["full_utterance"].append(sentence)
 
-# THIS FUNCTION CREATES A DATAFRAME IN PANDAS FROM A GIVEN DICTIONARY (e.g. the one created above)
+# THIS FUNCTION CREATES A DATAFRAME IN PANDAS FROM A GIVEN DICTIONARY (e.g. the one created with the function defined above)
 def create_df(source_dict):
     column_names = source_dict.keys()
     df = pd.DataFrame(source_dict, columns=column_names)

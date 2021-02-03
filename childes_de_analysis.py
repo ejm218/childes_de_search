@@ -54,8 +54,9 @@ exec(functions_file)
 print("Creating a Dataframe...")
 for corpus in corpora:
     generate_data(corpus) # this returns a dict object called child_utterances_data
-data = create_df(child_utterances_data)
+data = create_df(child_utterances_data) # this saves the dict object to the variable called 'data'
 print(f"Dataframe successfully generated. There are {len(data)} rows and {len(data.columns)} in this Dataframe.")
+
 
 # CREATE SUBGROUPS FOR ANALYSIS this part doesn't work yet and IDK why, age variable always returns None
 #under_4 = []
