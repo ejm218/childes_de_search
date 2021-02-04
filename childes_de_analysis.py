@@ -67,5 +67,14 @@ print(f"There are {len(data_over_4)} 的 utterances by children older than 48 mo
 np_search = "\bn:?|\bpro:?"
 vp_search = "\bv:?"
 adj_search = "\badj"
-possessives_data = df[df.preceding_item.str.contains(np_search, na=False)]
+possessives_data = full_data[full_data.preceding_item.str.contains(np_search, na=False)]
 print(f"There are {len(possessives_data)} rows in the possessives frame")
+adj_data = full_data[full_data.preceding_item.str.contains(adj_search, na=False)]
+print(f"There are {len(adj_data)} rows in the adjectives frame")
+relc_data = full_data[full_data.preceding_item.str.contains(vp_search, na=False)]
+print(f"There are {len(relc_data)} rows in the relative clauses frame")
+
+# RECURSION
+for corpus in corpora:
+    recursion_search
+recursion_df = create_df(recursion_data)
