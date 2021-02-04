@@ -63,7 +63,9 @@ data_under_4 = full_data[full_data["age"] <= 48]
 print(f"There are {len(data_under_4)} 的 utterances by children 48 months and younger.")
 data_over_4 = full_data[full_data["age"] > 48]
 print(f"There are {len(data_over_4)} 的 utterances by children older than 48 months.")
-np_search = "\bn:?"
+
+np_search = "\bn:?|\bpro:?"
 vp_search = "\bv:?"
 adj_search = "\badj"
-pronoun_search = "\bpro:?"
+possessives_data = df[df.preceding_item.str.contains(np_search, na=False)]
+print(f"There are {len(possessives_data)} rows in the possessives frame")
