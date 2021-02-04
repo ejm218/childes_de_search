@@ -68,7 +68,6 @@ print(f"There are {len(data_over_4)} 的 utterances by children older than 48 mo
 np_search = "n:?|pro:?" # finds all nouns and pronouns
 vp_search = "v:?" # finds all verbs
 adj_search = "adj" # finds all adjectives
-
 possessives_data = full_data[full_data["preceding_item"].str.contains(np_search, na=False)]
 print(f"There are {len(possessives_data)} rows in the possessives frame")
 adj_data = full_data[full_data["preceding_item"].str.contains(adj_search, na=False)]
@@ -77,7 +76,10 @@ relc_data = full_data[full_data["preceding_item"].str.contains(vp_search, na=Fal
 print(f"There are {len(relc_data)} rows in the relative clauses frame")
 
 # RECURSION
+spreadsheet_name = "child_recursion.xlsx"
 for corpus in corpora:
     recursion_search(corpus)
 recursion_df = create_df(recursion_data)
 print(f"There are {len(recursion_df)} possible instances of recursion in the dataset.")
+recursion_df.to_excel(spreadsheet_name)
+print(f"A spreadsheet has been created containing all possible recursive utterances. You can find it at {spreadsheet_path}.")
