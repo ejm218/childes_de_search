@@ -47,6 +47,13 @@ child_utterances_data = {
         "succeeding_item": [],
         "full_utterance": [],
     }
+# POS TAGGED WORDS ARE CONTAINED IN TUPLES. THIS CONVERTS THE TUPLE FOR EACH WORD+TAG TO A STRING
+def tuple_to_string(tup):
+	new_str = ""
+	for i in tup:
+		new_str += i
+    return new_str
+
 # THIS FUNCTION EXTRACTS RELEVANT DATA FROM EACH TRANSCRIPT IN A CORPUS AND WRITES THE VALUES TO THE DICT DEFINED ABOVE
 def generate_data(corpus_name):
     transcripts = corpus_name.fileids()
@@ -70,8 +77,8 @@ def generate_data(corpus_name):
                     de_index = sentence.index(item)
                     before_index = int(de_index - 1)
                     after_index = int(de_index + 1)
-                    child_utterances_data["preceding_item"].append(sentence[before_index])
-                    child_utterances_data["succeeding_item"].append(sentence[after_index])
+                    child_utterances_data["preceding_item"].append(tuple_to_string(sentence[before_index]))
+                    child_utterances_data["succeeding_item"].append(tuple_to_string(sentence[after_index]))
                     child_utterances_data["full_utterance"].append(sentence)
 
 # THIS FUNCTION CREATES A DATAFRAME IN PANDAS FROM A GIVEN DICTIONARY (e.g. the one created with the function defined above)
