@@ -59,22 +59,23 @@ full_data = create_df(child_utterances_data) # this saves the dict object to the
 print(f"Dataframe successfully generated. There are {len(full_data)} rows and {len(full_data.columns)} columns in this Dataframe.")
 
 # CREATE SUBSETS OF THE DATA BASED ON AGE ETC
-data_under_4 = full_data[full_data["age"] <= 48]
+data_under_4 = full_data.copy()[full_data["age"] <= 48]
 print(f"There are {len(data_under_4)} 的 utterances by children 48 months and younger.")
-data_over_4 = full_data[full_data["age"] > 48]
+data_over_4 = full_data.copy()[full_data["age"] > 48]
 print(f"There are {len(data_over_4)} 的 utterances by children older than 48 months.")
 
-np_search = "\bn:?|\bpro:?"
+np_search = "n:?|pro:?"
 vp_search = "\bv:?"
 adj_search = "\badj"
-possessives_data = full_data[full_data.preceding_item.str.contains(np_search, na=False)]
+possessives_data = full_data[full_data["preceding_item"].str.contains(np_search, na=False)]
 print(f"There are {len(possessives_data)} rows in the possessives frame")
-adj_data = full_data[full_data.preceding_item.str.contains(adj_search, na=False)]
+adj_data = full_data[full_data.preceding_item.str.contains(adj_search, na=False) == True]
 print(f"There are {len(adj_data)} rows in the adjectives frame")
-relc_data = full_data[full_data.preceding_item.str.contains(vp_search, na=False)]
+relc_data = full_data[full_data.preceding_item.str.contains(vp_search, na=False) == True]
 print(f"There are {len(relc_data)} rows in the relative clauses frame")
 
 # RECURSION
 for corpus in corpora:
     recursion_search
 recursion_df = create_df(recursion_data)
+print(f"There are {len(recursion_df)} possible instances of recursion in the dataset.")

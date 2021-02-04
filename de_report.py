@@ -88,12 +88,12 @@ def create_df(source_dict):
     return df
 
 # SEARCH EXPLICITLY FOR MULTILEVEL EMBEDDING
+recursion_data = {
+        "filename": [],
+        "age": [],
+        "full_utterance": [],
+    }
 def recursion_search(corpus_name):
-    recursion_data = {
-            "filename": [],
-            "age": [],
-            "full_utterance": [],
-        }
     transcripts = corpus_name.fileids()
     for transcript in transcripts:
         sentences = corpus_name.sents(transcript, speaker="CHI") # not using tagged sentences here to make it easier to use regex
@@ -102,9 +102,8 @@ def recursion_search(corpus_name):
         for sentence in sentences:
             full_sentence = ""
             for word in sentence:
-                full_sentence += word
-            if re.search(".+的.+的?", full_sentence):
+                full_sentence = full_sentence + word
+            if re.search(".+的.+的.*的?", full_sentence):
                 recursion_data["filename"].append(transcript)
                 recursion_data["age"].append(age)
                 recursion_data["full_utterance"].append(full_sentence)
-    return recursion_data

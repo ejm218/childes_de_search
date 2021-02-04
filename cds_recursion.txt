@@ -1,0 +1,17 @@
+From TCCM/Cheng/03100.cha (3;10)
+ADU: 你 给 我 看 你 的 书 „ 好不好 .
+%mor: pro:per|ni3=you prep|gei3=for pro:per|wo3=I v|kan4=look pro:per|ni3=you poss|de n|shu1=book end|end co:int|hao3bu2hao3=okay .
+ADU: 你 的 汽车 的 书 .
+%mor: pro:per|ni3=you poss|de n|qi4che1=motor_vehicle poss|de n|shu1=book .
+CHI: 汽车 喔 .
+%mor: n|qi4che1=motor_vehicle co|wo4=surprise .
+ADU: 欸 !
+%mor: co|ei4=sigh !
+ADU: 我 都 还 没有 看 过 欸 !
+%mor: pro:per|wo3=I adv|dou1=all adv|hai2=still adv|mei2you3=not_yet v|kan4=look asp|guo4 co|ei4=sigh !
+CHI: 0 .
+CHI: 0 .
+ADU: 你 讲 给 我 听 „ 好不好 ?
+%mor: pro:per|ni3=you v|jiang3=say prep|gei3=for pro:per|wo3=I v|ting1=listen end|end co:int|hao3bu2hao3=okay ?
+CHI: 好 ‡ 我 要 赛车 .
+%mor: adj|hao3=good beg|beg pro:per|wo3=I v|yao4=want n|sai4che1=race_car .
