@@ -87,7 +87,7 @@ def create_df(source_dict):
     df = pd.DataFrame(source_dict, columns=column_names)
     return df
 
-# SEARCH EXPLICITLY FOR MULTILEVEL EMBEDDING
+# SEARCH EXPLICITLY FOR MULTILEVEL RECURSIVE EMBEDDING
 recursion_data = {
         "filename": [],
         "age": [],
@@ -103,7 +103,7 @@ def recursion_search(corpus_name):
             full_sentence = ""
             for word in sentence:
                 full_sentence = full_sentence + word
-            if re.search(".+的.+的.*的?", full_sentence):
+            if re.match(".+的.+的.+", full_sentence):
                 recursion_data["filename"].append(transcript)
                 recursion_data["age"].append(age)
                 recursion_data["full_utterance"].append(full_sentence)

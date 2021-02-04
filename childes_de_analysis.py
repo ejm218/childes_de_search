@@ -64,18 +64,20 @@ print(f"There are {len(data_under_4)} 的 utterances by children 48 months and y
 data_over_4 = full_data.copy()[full_data["age"] > 48]
 print(f"There are {len(data_over_4)} 的 utterances by children older than 48 months.")
 
-np_search = "n:?|pro:?"
-vp_search = "\bv:?"
-adj_search = "\badj"
+# REGEX TO FIND DIFFERENT POS TAGS
+np_search = "n:?|pro:?" # finds all nouns and pronouns
+vp_search = "v:?" # finds all verbs
+adj_search = "adj" # finds all adjectives
+
 possessives_data = full_data[full_data["preceding_item"].str.contains(np_search, na=False)]
 print(f"There are {len(possessives_data)} rows in the possessives frame")
-adj_data = full_data[full_data.preceding_item.str.contains(adj_search, na=False) == True]
+adj_data = full_data[full_data["preceding_item"].str.contains(adj_search, na=False)]
 print(f"There are {len(adj_data)} rows in the adjectives frame")
-relc_data = full_data[full_data.preceding_item.str.contains(vp_search, na=False) == True]
+relc_data = full_data[full_data["preceding_item"].str.contains(vp_search, na=False)]
 print(f"There are {len(relc_data)} rows in the relative clauses frame")
 
 # RECURSION
 for corpus in corpora:
-    recursion_search
+    recursion_search(corpus)
 recursion_df = create_df(recursion_data)
 print(f"There are {len(recursion_df)} possible instances of recursion in the dataset.")
