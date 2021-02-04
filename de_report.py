@@ -49,9 +49,9 @@ child_utterances_data = {
     }
 # POS TAGGED WORDS ARE CONTAINED IN TUPLES. THIS CONVERTS THE TUPLE FOR EACH WORD+TAG TO A STRING
 def tuple_to_string(tup):
-	new_str = ""
-	for i in tup:
-		new_str += i
+    new_str = ""
+    for i in tup:
+        new_str += i
     return new_str
 
 # THIS FUNCTION EXTRACTS RELEVANT DATA FROM EACH TRANSCRIPT IN A CORPUS AND WRITES THE VALUES TO THE DICT DEFINED ABOVE

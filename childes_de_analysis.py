@@ -1,6 +1,7 @@
 import nltk
 from nltk.corpus.reader import CHILDESCorpusReader
 import numpy as np
+import re
 corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # be sure to change this if your corpora are located in a different path
 
 # IMPORT THE CORPORA FOR USE IN THE SEARCH
@@ -54,21 +55,15 @@ exec(functions_file)
 print("Creating a Dataframe...")
 for corpus in corpora:
     generate_data(corpus) # this returns a dict object called child_utterances_data
-data = create_df(child_utterances_data) # this saves the dict object to the variable called 'data'
-print(f"Dataframe successfully generated. There are {len(data)} rows and {len(data.columns)} columns in this Dataframe.")
+full_data = create_df(child_utterances_data) # this saves the dict object to the variable called 'data'
+print(f"Dataframe successfully generated. There are {len(full_data)} rows and {len(full_data.columns)} columns in this Dataframe.")
 
-data_under_4 = data[data["age"] <= 48]
-data_over_4 = data[data["age"] > 48]
-
-# CREATE SUBGROUPS FOR ANALYSIS this part doesn't work yet and IDK why, age variable always returns None
-#under_4 = []
-#over_4 = []
-#for corpus in corpora:
-#    corpus_files = list(corpus.fileids())
-#    for file in corpus_files:
-#        age = corpus.age(fileids=file, month=True)
-#        age = age[0]
-#        if age <= 48:
-#            under_4.append(file)
-#        else:
-#            over_4.append(file)
+# CREATE SUBSETS OF THE DATA BASED ON AGE ETC
+data_under_4 = full_data[full_data["age"] <= 48]
+print(f"There are {len(data_under_4)} 的 utterances by children 48 months and younger.")
+data_over_4 = full_data[full_data["age"] > 48]
+print(f"There are {len(data_over_4)} 的 utterances by children older than 48 months.")
+np_search = "\bn:?"
+vp_search = "\bv:?"
+adj_search = "\badj"
+pronoun_search = "\bpro:?"
