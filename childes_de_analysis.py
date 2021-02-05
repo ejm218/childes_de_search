@@ -83,3 +83,19 @@ recursion_df = create_df(recursion_data)
 print(f"There are {len(recursion_df)} possible instances of recursion in the dataset.")
 recursion_df.to_excel(spreadsheet_name)
 print(f"A spreadsheet has been created containing all possible recursive utterances.")
+for value in recursion_data.values():
+    value.clear() # otherwise the CDS search will simply add on to the pre-existing child speech data
+print("Now searching for recursion in CDS...")
+for corpus in corpora:
+    adult_participants = []
+    corpus_participants = corpus.participants(corpus.fileids())
+    for this_corpus_participants in corpus_participants:
+        for key in sorted(this_corpus_participants.keys()):
+            adult_participants.append(key)
+    adult_participants = list(set(adult_participants))
+    adult_participants.remove("CHI")
+    recursion_search(corpus, speaker=adult_participants)
+cds_recursion_df = create_df(recursion_data)
+print(f"Found {len(cds_recursion_df)} possible instances of recursion in child-directed speech.")
+cds_recursion_df.to_excel("cds_recursion.xlsx")
+print("A spreadsheet with these results has been created.")
