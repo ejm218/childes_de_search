@@ -82,4 +82,4 @@ for corpus in corpora:
 recursion_df = create_df(recursion_data)
 print(f"There are {len(recursion_df)} possible instances of recursion in the dataset.")
 recursion_df.to_excel(spreadsheet_name)
-print(f"A spreadsheet has been created containing all possible recursive utterances. You can find it at {spreadsheet_path}.")
+print(f"A spreadsheet has been created containing all possible recursive utterances.")

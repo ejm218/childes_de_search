@@ -1,4 +1,4 @@
-# THIS FILE CONTAINS THE FUNCTIONS USED TO GENERATE A DF IN THE MAIN ANALYSIS
+# THIS FILE CONTAINS THE FUNCTIONS USED TO GENERATE SEVERAL DIFFERENT DATASETS IN THE MAIN ANALYSIS
 import nltk
 from nltk.corpus.reader import CHILDESCorpusReader
 from collections import Counter
@@ -93,17 +93,17 @@ recursion_data = {
         "age": [],
         "full_utterance": [],
     }
-def recursion_search(corpus_name):
+def recursion_search(corpus_name, speaker="CHI"):
     transcripts = corpus_name.fileids()
     for transcript in transcripts:
-        sentences = corpus_name.sents(transcript, speaker="CHI") # not using tagged sentences here to make it easier to use regex
+        sentences = corpus_name.sents(transcript, speaker=speaker) # not using tagged sentences here to make it easier to use regex
         age = corpus_name.age(fileids=transcript, month=True)
         age = age[0]
         for sentence in sentences:
             full_sentence = ""
             for word in sentence:
                 full_sentence = full_sentence + word
-            if re.match(".+的.+的.+", full_sentence):
+            if re.match(".+的[^时候].+的[^时候].+", full_sentence):
                 recursion_data["filename"].append(transcript)
                 recursion_data["age"].append(age)
                 recursion_data["full_utterance"].append(full_sentence)
