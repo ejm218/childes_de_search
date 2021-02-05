@@ -84,7 +84,7 @@ print(f"There are {len(recursion_df)} possible instances of recursion in the dat
 recursion_df.to_excel(spreadsheet_name)
 print(f"A spreadsheet has been created containing all possible recursive utterances.")
 for value in recursion_data.values():
-    value.clear() # otherwise the CDS search will simply add on to the pre-existing child speech data
+    value.clear() # otherwise the CDS search will simply add on to the pre-existing child speech data dict
 print("Now searching for recursion in CDS...")
 for corpus in corpora:
     adult_participants = []
