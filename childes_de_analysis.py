@@ -102,5 +102,10 @@ print("A spreadsheet with these results has been created.")
 
 # MANIPULATING THE RECURSION DATA
 # after going through the output spreadsheet by hand
-to_keep = [2,7,13,23,27,31,22,33,35,45,52,55,57,61,89,108,112,123,131,132]
-recursion_df_culled = recursion_df.loc[to_keep]
+child_to_keep = [2,7,13,23,27,31,22,33,35,45,52,55,57,61,89,108,112,123,131,132]
+recursion_df_culled = recursion_df.loc[child_to_keep]
+recursion_df_culled["age"].value_counts()
+recursion_df_culled = recursion_df_culled.loc[recursion_df_culled["age"] != 30]
+recursion_df_culled = recursion_df_culled.loc[recursion_df_culled["age"] != 70] # these two were not recursive upon further inspection
+recursion_over_48 = recursion_df_culled.loc[recursion_df_culled["age"] > 48]
+recursion_under_48 = recursion_df_culled.loc[recursion_df_culled["age"] <= 48] 
