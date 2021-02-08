@@ -99,3 +99,8 @@ cds_recursion_df = create_df(recursion_data)
 print(f"Found {len(cds_recursion_df)} possible instances of recursion in child-directed speech.")
 cds_recursion_df.to_excel("cds_recursion.xlsx")
 print("A spreadsheet with these results has been created.")
+
+# MANIPULATING THE RECURSION DATA
+# after going through the output spreadsheet by hand
+to_keep = [2,7,13,23,27,31,22,33,35,45,52,55,57,61,89,108,112,123,131,132]
+recursion_df_culled = recursion_df.loc[to_keep]
