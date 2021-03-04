@@ -28,8 +28,7 @@ vp_search = "v:?[a-z]*" # finds all verbs
 data = pd.DataFrame(columns = ["filename", "age", "full_utterance", "search_term_tag", "preceding_item", "preceding_item_type", "succeeding_item", "succeeding_item_type"])
 for corpus in corpora:
     corpus_data = corpus_search_MOR(corpus, "的")
-    data.append(corpus_data, ignore_index=True)
-#data = create_df(corpus_search_MOR([corpus for corpus in corpora], "的"))
+    data = data.append(corpus_data, ignore_index=True)
 data = data.replace(np_search, "NP", regex=True)
 data = data.replace(vp_search, "VP", regex=True)
 print(data.head())
