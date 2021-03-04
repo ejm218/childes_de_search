@@ -5,7 +5,6 @@ from nltk.corpus.reader import CHILDESCorpusReader
 from collections import Counter
 import pandas as pd
 corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # change if your corpora are in a different path
-search_term = "的" # change this if you would like to search for a different lexical item
 
 def corpus_search(corpus_name, search_term, target_speaker="CHI", include_prior_utt=False):
     """Searches an entire corpus with parameters corpus_name (required, search_term (required), target_speaker (optional, default = CHI), and the option to include the preceding utterance (default = False). Search term can be a single word/phrase or a regular expression."""
@@ -30,7 +29,7 @@ def corpus_search(corpus_name, search_term, target_speaker="CHI", include_prior_
                 corpus_search_results["full_utterance"].append(sentence)
                 if include_prior_utt == True:
                     corpus_search_results["preceding_utterance"] = []
-                    corpus_search_results["preceding_utterance"].append(corpus_name.sents(transcript)[(sentence_index - 1)])
+                    corpus_search_results["preceding_utterance"].append(corpus_name.sents(transcript)[(int(sentence_index - 1))])
     print(f"The target speaker(s) {target_speaker} uses {search_term} {len(corpus_search_results)} total times.")
     return corpus_search_results
 
@@ -42,43 +41,36 @@ print(test_frame["preceding_utterance"])
 def tuple_to_string(tup):
     new_str = ""
     for i in tup:
-        new_str += i
+        new_str = "|" + i
     return new_str
 
-# THIS FUNCTION EXTRACTS RELEVANT DATA FROM EACH TRANSCRIPT IN A CORPUS AND WRITES THE VALUES TO THE DICT DEFINED ABOVE
-def generate_data(corpus_name):
+def corpus_search_MOR(corpus_name, search_term, target_speaker="CHI", include_prior_utt=False):
+    """Searches an entire corpus with parameters corpus_name (required, search_term (required), target_speaker (optional, default = CHI), and the option to include the preceding utterance (default = False). Search term can be a single word/phrase or a regular expression. Each word and its corresponding POS tag are represented in the format word|tag, e.g. "at|prep". Keep this in mind if you are trying to search for both a word and its POS, and format your regex accordingly."""
+    corpus_search_results = {
+        "filename": [],
+        "age": [],
+        "full_utterance": []
+        }
     transcripts = corpus_name.fileids()
-    people = corpus_name.participants(transcripts)
-    chi_de_not_final = []
-    filenames = []
-    ages = []
-    preceding_items = []
-    succeeding_items = []
-    full_utterances = []
+    for transcript in transcripts:
+        sentences = corpus_name.tagged_sents(transcript, speaker=target_speaker) # each sentence is a list of tuples
+        age = corpus_name.age(fileids=transcript, month=True)
+        age = age[0]
+        for sentence in sentences:
+            for item in sentence: # each word in the sentence is contained in a tuple where the first item is the word and the second is its MOR tag
+                converted_item = tuple_to_string(item)
+                if re.match(search_term, converted_item):
+                    sentence_index = corpus_name.sents(transcript).index(sentence)
+                    corpus_search_results["full_utterance"].append(sentence)
+                    corpus_search_results["filename"].append(transcript)
+                    corpus_search_results["age"].append(age)
+                    if include_prior_utt == True:
+                        corpus_search_results["preceding_utterance"] = []
+                        corpus_search_results["preceding_utterance"].append(corpus_name.sents(transcript)[(int(sentence_index - 1))])
+    return corpus_search_results
 
 # THIS FUNCTION CREATES A DATAFRAME IN PANDAS FROM A GIVEN DICTIONARY (e.g. the one created with the function defined above)
 def create_df(source_dict):
     column_names = source_dict.keys()
     df = pd.DataFrame(source_dict, columns=column_names)
     return df
-
-# SEARCH EXPLICITLY FOR MULTILEVEL RECURSIVE EMBEDDING
-recursion_data = {
-        "filename": [],
-        "age": [],
-        "full_utterance": [],
-    }
-def recursion_search(corpus_name, speaker="CHI"):
-    transcripts = corpus_name.fileids()
-    for transcript in transcripts:
-        sentences = corpus_name.sents(transcript, speaker=speaker) # not using tagged sentences here to make it easier to use regex
-        age = corpus_name.age(fileids=transcript, month=True)
-        age = age[0]
-        for sentence in sentences:
-            full_sentence = ""
-            for word in sentence:
-                full_sentence = full_sentence + word
-            if re.match(".+的[^时候].+的[^时候].+", full_sentence):
-                recursion_data["filename"].append(transcript)
-                recursion_data["age"].append(age)
-                recursion_data["full_utterance"].append(full_sentence)
