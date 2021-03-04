@@ -1,5 +1,6 @@
 # THIS FILE CONTAINS THE FUNCTIONS USED TO GENERATE SEVERAL DIFFERENT DATASETS IN THE MAIN ANALYSIS
 import nltk
+import re
 from nltk.corpus.reader import CHILDESCorpusReader
 from collections import Counter
 import pandas as pd
@@ -7,7 +8,7 @@ corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # change if yo
 search_term = "的" # change this if you would like to search for a different lexical item
 
 def corpus_search(corpus_name, search_term, target_speaker="CHI", include_prior_utt=False):
-    """Searches an entire corpus with parameters corpus_name (required, search_term (required), target_speaker (optional, default = CHI), and the option to include the preceding utterance (default = False)."""
+    """Searches an entire corpus with parameters corpus_name (required, search_term (required), target_speaker (optional, default = CHI), and the option to include the preceding utterance (default = False). Search term can be a single word/phrase or a regular expression."""
     corpus_search_results = {
         "filename": [],
         "age": [],
@@ -19,7 +20,10 @@ def corpus_search(corpus_name, search_term, target_speaker="CHI", include_prior_
         age = corpus_name.age(fileids=transcript, month=True)
         sentences = corpus_name.sents(transcript, speaker=target_speaker)
         for sentence in sentences: # ...for each sentence in the file...
-            if search_term in sentence:
+            full_sentence = ""
+            for word in sentence:
+                full_sentence = full_sentence + " " + word
+            if re.match(search_term, full_sentence):
                 sentence_index = corpus_name.sents(transcript).index(sentence)
                 corpus_search_results["filename"].append(transcript)
                 corpus_search_results["age"].append(age)
