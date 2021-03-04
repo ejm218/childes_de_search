@@ -38,10 +38,17 @@ print(variety)
 
 #"np_head", "vp_head", "sentence_final", "prec_adj", "prec_np", "prec_vp"
 
-ages = set(data["age"].tolist())
-count_data = pd.DataFrame(columns= ["age", "total_de", "np_head", "vp_head", "sentence_final", "prec_adj", "prec_np", "prec_vp"])
+ages = list(set(data["age"].tolist()))
+print(len(ages))
+#count_data = pd.DataFrame(columns= ["age", "total_de", "np_head"])
+#print(data.groupby("age").succeeding_item_type.nunique())
+#for age in ages:
+#    target = data.where(data["age"] == age)
+#    count_data["age"] = age
+#    count_data["total_de"] = len(target)
+#    count_data["np_head"] = len(target.where(target["succeeding_item_type"] == "NP"))
 
-
+#print(count_data.info())
 
 # for each month i want to
     # see number of sentence-final de
