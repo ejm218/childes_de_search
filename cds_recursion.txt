@@ -15,3 +15,21 @@ ADU: 你 讲 给 我 听 „ 好不好 ?
 %mor: pro:per|ni3=you v|jiang3=say prep|gei3=for pro:per|wo3=I v|ting1=listen end|end co:int|hao3bu2hao3=okay ?
 CHI: 好 ‡ 我 要 赛车 .
 %mor: adj|hao3=good beg|beg pro:per|wo3=I v|yao4=want n|sai4che1=race_car .
+
+From Erbaugh/Kang/18.cha (3;07)
+MOT: 你 记得 不 记得 那个 赵 阿姨 的 嫂嫂 的 事情 啊 ! ▶
+%mor: pro:per|ni3=you v|ji4de2=remember adv|bu4=not v|ji4de2=remember co|na4ge n:prop|zhao4=Zhao familiar#n:relat|yi2=mothers_sister poss|de n|sao3sao=elder_brothers_wife poss|de n|shi4qing2=matter sfp|a1 !
+%gra: 1|2|SUBJ 2|0|ROOT 3|4|JCT 4|2|SRL 5|11|MOD 6|11|SUBJ 7|9|MOD 8|7|POSS 9|11|MOD 10|9|POSS 11|4|OBJ 12|2|SFP 13|2|PUNCT
+CHI: 嫂嫂 是 谁 . ▶
+%mor: n|sao3sao=elder_brothers_wife v:cop|shi4=is pro:wh|shei2=who .
+%gra: 1|2|SUBJ 2|0|ROOT 3|2|PRED 4|2|PUNCT
+MOT: 赵 阿姨 的 嫂嫂 啊 . ▶
+%mor: n:prop|zhao4=Zhao familiar#n:relat|yi2=mothers_sister poss|de n|sao3sao=elder_brothers_wife sfp|a1 .
+%gra: 1|4|SUBJ 2|4|MOD 3|2|POSS 4|0|INCROOT 5|4|SFP 6|4|PUNCT
+MOT: 你 忘 啦 ? ▶
+%mor: pro:per|ni3=you v|wang4=forget sfp|la1 ?
+%gra: 1|2|SUBJ 2|0|ROOT 3|2|SFP 4|2|PUNCT
+CHI: 我 讲话 . ▶
+%mor: pro:per|wo3=I v|jiang3hua4=speak .
+%gra: 1|2|SUBJ 2|0|ROOT 3|2|PUNCT
+CHI: 哇哇 哇哇 . ▶

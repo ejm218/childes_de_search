@@ -108,4 +108,4 @@ recursion_df_culled["age"].value_counts()
 recursion_df_culled = recursion_df_culled.loc[recursion_df_culled["age"] != 30]
 recursion_df_culled = recursion_df_culled.loc[recursion_df_culled["age"] != 70] # these two were not recursive upon further inspection
 recursion_over_48 = recursion_df_culled.loc[recursion_df_culled["age"] > 48]
-recursion_under_48 = recursion_df_culled.loc[recursion_df_culled["age"] <= 48] 
+recursion_under_48 = recursion_df_culled.loc[recursion_df_culled["age"] <= 48]

@@ -6,7 +6,7 @@ import pandas as pd
 corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # change if your corpora are in a different path
 search_term = "的" # change this if you would like to search for a different lexical item
 
-def report(corpus_name):
+def report(corpus_name): # add search term as a parameter
     transcripts = corpus_name.fileids()
     people = corpus_name.participants(transcripts)
     chi_sentences = []
@@ -35,6 +35,7 @@ def report(corpus_name):
     from collections import Counter
     precedes_de_count = Counter(precedes_de)
     succeeds_de_count = Counter(succeeds_de)
+    # add print for these numbers
     precedes_de_unique = set(precedes_de)
     succeeds_de_unique = set(succeeds_de)
     print(f"In the {len(chi_de_not_final)} non-sentence final utterances, there are {len(precedes_de_unique)} unique items that occur BEFORE 的, and {len(succeeds_de_unique)} unique items that occur AFTER 的.")

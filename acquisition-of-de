@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{covington}
+\usepackage[utf8]{inputenc} % For non-English languages.
+\usepackage[english]{babel} % English will be active language.
+% Install cjk for Chinese, zhmetrics for font size.
+\usepackage{CJKutf8}
+\usepackage[T1]{fontenc} % T1 will be active encoding. Not sure what this does TBH
+
+\title{Determining the Acquisition Path for 的 in Mandarin}
+\author{Emma J. Merritt}
+\date{}
+\begin{document}
+\section{Introduction}
+Both the semantic and syntactic characteristics of de have been a source of contention in the literature for well over forty years now.
+
+One reason for this disgruntlement may be that de wears many hats in Modern Mandarin and can combine with a large number of syntactic objects. When the target of modification is a noun phrase (NP), for instance, de may appear adjacent to an adjectival phrase (\ref{adj-example}), a possessive phrase (\ref{poss-example}), a prepositional phrase (PP) (\ref{pp-example}), or an inflectional phrase (i.e. as a complementizer) (\ref{rc-example}).
+
+\begin{examples}
+  \begin{CJK}{UTF8}{gbsn}
+    \item\label{adj-example}
+        \glll 胖 的 孩子
+         pang de haizi
+         fat DE child
+         \glt 'fat child'
+         \glend
+    \item\label{poss-example}
+        \glll 张三 的 卡车
+        zhangsan de kache
+        Zhangsan DE car
+        \glt 'Zhangsan's car'
+        \glend
+    \item\label{pp-example}
+        \glll 电影院 的 旁边
+        dianyingyuan de pangbian
+        cinema DE next-to
+        \glt 'next to the cinema'
+        \glend
+    \item\label{rc-example}
+        \glll 李斯 昨天 买 的 书　
+        lisi zuotian mai de shu
+        Lisi yesterday buy DE book
+        \glt 'The book that Lisi bought yesterday'
+        \glend
+  \end{CJK}
+\end{examples}
+
+Furthermore, there is a phonetically identical element that allows modification of verb phrases, but is distinguished orthographically. Examples (\ref{vp-example1}) and (\ref{vp-example2}) illustrate this use.
+
+\begin{examples}
+  \begin{CJK}{UTF8}{gbsn}
+    \item\label{vp-example1}
+        \glll 跑 得 快
+         pao de kuai
+         run DE fast
+         \glt 'to run fast'
+         \glend
+    \item\label{vp-example2}
+        \glll 紧张 地 问
+        jinzhang de wen
+        nervous DE ask
+        \glt 'to ask nervously'
+        \glend
+  \end{CJK}
+\end{examples}
+
+\section{Acquisition of de}
+Despite its widespread use in the adult grammar and ongoing debate as to its typological characteristics, nobody to date has examined the development of de in the grammar of Mandarin-speaking children. Like many linguistic phenomena, acquisition data may provide us with deep insight into the role that this particle plays in the grammar. 
+
+\section{Method}
+
+\section{Results}
+
+\section{Discussion}
+
+\end{document}
