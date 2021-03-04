@@ -6,6 +6,8 @@ from collections import Counter
 import pandas as pd
 corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # change if your corpora are in a different path
 
+#erbaugh = CHILDESCorpusReader(corpus_root, "Erbaugh/.*.xml")
+
 def corpus_search(corpus_name, search_term, target_speaker="CHI", include_prior_utt=False):
     """Searches an entire corpus with parameters corpus_name (required, search_term (required), target_speaker (optional, default = CHI), and the option to include the preceding utterance (default = False). Search term can be a single word/phrase or a regular expression."""
     corpus_search_results = {
@@ -33,9 +35,8 @@ def corpus_search(corpus_name, search_term, target_speaker="CHI", include_prior_
     print(f"The target speaker(s) {target_speaker} uses {search_term} {len(corpus_search_results)} total times.")
     return corpus_search_results
 
-erbaugh = CHILDESCorpusReader(corpus_root, "Erbaugh/.*.xml")
-test_frame = corpus_search(erbaugh, "妈妈", include_prior_utt=True)
-print(test_frame["preceding_utterance"])
+#test_frame = corpus_search(erbaugh, "妈妈", include_prior_utt=True)
+#print(test_frame["preceding_utterance"])
 
 # POS TAGGED WORDS ARE CONTAINED IN TUPLES. THIS CONVERTS THE TUPLE FOR EACH WORD+TAG TO A STRING
 def tuple_to_string(tup):
