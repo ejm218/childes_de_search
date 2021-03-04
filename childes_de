@@ -1,0 +1,30 @@
+# IMPORT CHILDES SEARCH FUNCTIONS
+import os
+os.chdir("/Users/academic/Documents/childes_de_search")
+functions_file = open("childes_search.py", "r")
+functions_file = functions_file.read()
+exec(functions_file)
+
+# IMPORT THE CORPORA FOR USE IN THE SEARCH
+chang1 = CHILDESCorpusReader(corpus_root, "Chang1/.*.xml")
+chang2 = CHILDESCorpusReader(corpus_root, "Chang2/.*.xml")
+changplay = CHILDESCorpusReader(corpus_root, "ChangPlay/.*.xml")
+changpn = CHILDESCorpusReader(corpus_root, "ChangPN/.*.xml")
+erbaugh = CHILDESCorpusReader(corpus_root, "Erbaugh/.*.xml")
+lizhou = CHILDESCorpusReader(corpus_root, "LiZhou/.*.xml")
+tong = CHILDESCorpusReader(corpus_root, "Tong/.*.xml")
+zhou1 = CHILDESCorpusReader(corpus_root, "Zhou1/.*.xml")
+zhou2 = CHILDESCorpusReader(corpus_root, "Zhou2/.*.xml")
+zhou3 = CHILDESCorpusReader(corpus_root, "Zhou3/.*.xml")
+corpora = [chang1, chang2, changplay, changpn, erbaugh, lizhou, tong, zhou1, zhou2, zhou3]
+
+# what do I want to find out
+# when de emerges
+# what types of items it is used to modify
+
+np_search = "n:?|pro:?" # finds all nouns and pronouns
+vp_search = "v:?" # finds all verbs
+adj_search = "adj" # finds all adjectives
+
+data = create_df(corpus_search_MOR(erbaugh, "的"))
+print(data.head())
