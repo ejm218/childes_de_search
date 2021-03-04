@@ -1,4 +1,3 @@
-# THIS FILE CONTAINS THE FUNCTIONS USED TO GENERATE SEVERAL DIFFERENT DATASETS IN THE MAIN ANALYSIS
 import nltk
 import re
 from nltk.corpus.reader import CHILDESCorpusReader
