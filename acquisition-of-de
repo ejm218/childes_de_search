@@ -85,7 +85,11 @@ A corpus search was conducted using corpora available via the CHILDES database (
 
 Corpora were included if the youngest age in the corpus was no greater than three years old.
 
-The analysis was run using Natural Language Toolkit (NLTK)'s built-in corpus reader functionality for CHILDES. XML files for each database were downloaded and searched using a program written in Python. 
+The analysis was run using Natural Language Toolkit (NLTK)'s built-in corpus reader functionality for CHILDES. XML files for each database were downloaded and searched using a program written in Python.
+
+\begin{CJK}{UTF8}{gbsn}
+  Two common expressions containing de were excluded from the dataset. The first, 的时候, translates roughly to English \textem{while} and occurs in IP-final position. The other exluded expression, 的话, also occurs IP-finally and can be translated as \textem{if} or \textem{in the case that...}. 
+\end{CJK}
 
 \section{Results}
 
