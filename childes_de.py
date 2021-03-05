@@ -86,7 +86,13 @@ count_data.plot("age", "total_de", kind="scatter")
 plt.savefig("total_de_raw.png")
 
 # to do:
-# create new DF where heads are represented as percentages of total de counts
+# create new DF where each column is represented as percentage of total de counts
 count_data_normed = count_data.copy()
 for i in range(len(count_data_normed)):
-    count_data_normed.iloc[i]
+    total_count = int(count_data_normed.at[i, "total_de"])
+    count_data_normed.at[i, "np_head"] = (int(count_data_normed.at[i, "np_head"]) / total_count)
+    count_data_normed.at[i, "vp_head"] = (int(count_data_normed.at[i, "vp_head"]) / total_count)
+    count_data_normed.at[i, "sentence_final"] = (int(count_data_normed.at[i, "sentence_final"]) / total_count)
+    count_data_normed.at[i, "prec_adj"] = (int(count_data_normed.at[i, "prec_adj"]) / total_count)
+    count_data_normed.at[i, "prec_np"] = (int(count_data_normed.at[i, "prec_np"]) / total_count)
+    count_data_normed.at[i, "prec_vp"] = (int(count_data_normed.at[i, "prec_vp"]) / total_count)
