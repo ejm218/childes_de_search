@@ -44,7 +44,7 @@ print(data.head())
 print(data.tail())
 
 # INTERIM SUMMARY OF DataFrame
-print(f"DATA SUMMARY \n Age range: {data["age"].min()}-{data["age"].max()} months\n Number of head types: {data["succeeding_item_type"].nunique()}\n There are {len(data)} rows in the dataframe.\n Now printing first five rows: ")
+print(f"DATA SUMMARY \n Age range: {data['age'].min()}-{data['age'].max()} months\n Number of head types: {data['succeeding_item_type'].nunique()}\n There are {len(data)} rows in the dataframe.\n Now printing first five rows: ")
 #modifier_types = data["preceding_item_type"].value_counts()
 #print(type(modifier_types))
 #head_types = data["succeeding_item_type"].value_counts()
@@ -77,6 +77,7 @@ for age in ages:
     count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
 print(count_data)
 count_data = create_df(count_data)
+count_data = count_data.sort_values(by="age")
 
 #CREATING PLOT(s)
-count_data.plot(x="age", y="sentence_final", kind="scatter")
+count_data.plot("age", ["sentence_final", "vp_head", "np_head"], kind="bar")
