@@ -6,14 +6,15 @@ import pandas as pd
 corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # change if your corpora are in a different path
 search_term = "的" # change this if you would like to search for a different lexical item
 
-def report(corpus_name): # add search term as a parameter
+def corpus_search(corpus_name, search_term, target_speaker="CHI"): # add search term as a parameter
+    """Searches an entire corpus with parameters corpus_name (required, search_term (required), and target_speaker (optional, default = CHI)."""
     transcripts = corpus_name.fileids()
     people = corpus_name.participants(transcripts)
     chi_sentences = []
     chi_de_sentences = []
     chi_de_not_final = []
     for transcript in transcripts: # for each file within the given corpus...
-        target_speaker = "CHI" # change this if you are targeting child-directed speech
+        target_speaker = target_speaker # change this if you are targeting child-directed speech
         sentences = corpus_name.sents(transcript, speaker=target_speaker)
         for sentence in sentences: # ...for each sentence in the file...
             chi_sentences.append(sentence) # ...add it to the variable containing the list of sentences
@@ -23,15 +24,15 @@ def report(corpus_name): # add search term as a parameter
     for sentence in chi_de_sentences:
         if sentence[-1] != search_term:
             chi_de_not_final.append(sentence)
-    print(f"The child uses DE {len(chi_de_sentences)} total times, {len(chi_de_not_final)} in non-sentence final position.")
+    print(f"The target speaker(s) {target_speaker} uses {search_term} {len(chi_de_sentences)} total times, {len(chi_de_not_final)} in non-sentence final position.")
     precedes_de = []
     succeeds_de = []
     for sentence in chi_de_not_final:
         de_index = sentence.index(search_term)
         before_index = int(de_index - 1)
         after_index = int(de_index + 1)
-        precedes_de.append(sentence[before_index]) # creates a list of the items that appear immediately before de in the data
-        succeeds_de.append(sentence[after_index]) # creates a list of the items that appear immediately after de
+        precedes_de.append(sentence[before_index]) # creates a list of the items that appear immediately before search term in the data
+        succeeds_de.append(sentence[after_index]) # creates a list of the items that appear immediately after search term
     from collections import Counter
     precedes_de_count = Counter(precedes_de)
     succeeds_de_count = Counter(succeeds_de)

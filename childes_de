@@ -25,12 +25,16 @@ corpora = [chang1, chang2, changplay, erbaugh, lizhou, tong, zhou1, zhou2, zhou3
 np_search = "n:?[a-z]*|pro:?[a-z]*" # finds all nouns and pronouns
 vp_search = "v:?[a-z]*" # finds all verbs
 
-data = pd.DataFrame(columns = ["filename", "age", "full_utterance", "search_term_tag", "preceding_item", "preceding_item_type", "succeeding_item", "succeeding_item_type"])
-for corpus in corpora:
-    corpus_data = corpus_search_MOR(corpus, "的")
-    data = data.append(corpus_data, ignore_index=True)
-data = data.replace(np_search, "NP", regex=True)
-data = data.replace(vp_search, "VP", regex=True)
+#data = pd.DataFrame(columns = ["filename", "age", "full_utterance", "search_term_tag", "preceding_item", "preceding_item_type", "succeeding_item", "succeeding_item_type"])
+#for corpus in corpora:
+#    corpus_data = corpus_search_MOR(corpus, "的")
+#    for item in corpus_data:
+#        data = data.append(corpus_data, ignore_index=True)
+data = create_df(multicorpus_search_MOR(corpora, "的"))
+data = data["preceding_item_type"].replace(np_search, "NP", regex=True)
+data = data["succeeding_item_type"].replace(np_search, "NP", regex=True)
+data = data["preceding_item_type"].replace(vp_search, "VP", regex=True)
+data = data["succeeding_item_type"].replace(vp_search, "VP", regex=True)
 print(data.head())
 print(data.tail())
 
