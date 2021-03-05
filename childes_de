@@ -31,10 +31,10 @@ vp_search = "v:?[a-z]*" # finds all verbs
 #    for item in corpus_data:
 #        data = data.append(corpus_data, ignore_index=True)
 data = create_df(multicorpus_search_MOR(corpora, "的"))
-data = data["preceding_item_type"].replace(np_search, "NP", regex=True)
-data = data["succeeding_item_type"].replace(np_search, "NP", regex=True)
-data = data["preceding_item_type"].replace(vp_search, "VP", regex=True)
-data = data["succeeding_item_type"].replace(vp_search, "VP", regex=True)
+data = data.replace({"preceding_item_type": np_search}, "NP", regex=True)
+data = data.replace({"succeeding_item_type": np_search}, "NP", regex=True)
+data = data.replace({"preceding_item_type": vp_search}, "VP", regex=True)
+data = data.replace({"succeeding_item_type": vp_search}, "VP", regex=True)
 print(data.head())
 print(data.tail())
 
@@ -70,10 +70,6 @@ for age in ages:
     count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
 print(count_data)
 count_data = create_df(count_data)
-#print(data[data["succeeding_item_type"] == "sfp"])
 
-# for each month i want to
-    # see number of sentence-final de
-    # see number of adj preceding de
-    # see number of n prceding de
-    # see number of
+#CREATING PLOT(s)
+count_data.plot(x="age", y="sentence_final", kind="scatter")

@@ -7,30 +7,31 @@ corpus_root = nltk.data.find("corpora/childes/data-xml/Mandarin") # change if yo
 
 erbaugh = CHILDESCorpusReader(corpus_root, "Erbaugh/.*.xml")
 
-def corpus_search(corpus_name, search_term, target_speaker="CHI", include_prior_utt=False):
-    """Searches an entire corpus with parameters corpus_name (required, search_term (required), target_speaker (optional, default = CHI), and the option to include the preceding utterance (default = False). Search term can be a single word/phrase or a regular expression."""
+def corpus_search(corpus_list, search_term, target_speaker="CHI", include_prior_utt=False):
+    """Searches an entire corpus with parameters corpus_list (required), search_term (required), target_speaker (optional, default = CHI), and the option to include the preceding utterance (default = False). Search term can be a single word/phrase or a regular expression."""
     corpus_search_results = {
         "filename": [],
         "age": [],
         "full_utterance": []
         }
     transcripts = corpus_name.fileids()
-    for transcript in transcripts: # for each file within the given corpus...
-        target_speaker = target_speaker
-        age = corpus_name.age(fileids=transcript, month=True)
-        sentences = corpus_name.sents(transcript, speaker=target_speaker)
-        for sentence in sentences: # ...for each sentence in the file...
-            full_sentence = ""
-            for word in sentence:
-                full_sentence = full_sentence + " " + word
-            if re.match(search_term, full_sentence):
-                sentence_index = corpus_name.sents(transcript).index(sentence)
-                corpus_search_results["filename"].append(transcript)
-                corpus_search_results["age"].append(age)
-                corpus_search_results["full_utterance"].append(sentence)
-                if include_prior_utt == True:
-                    corpus_search_results["preceding_utterance"] = []
-                    corpus_search_results["preceding_utterance"].append(corpus_name.sents(transcript)[(int(sentence_index - 1))])
+    for corpus_name in corpus_list:
+        for transcript in transcripts: # for each file within the given corpus...
+            target_speaker = target_speaker
+            age = corpus_name.age(fileids=transcript, month=True)
+            sentences = corpus_name.sents(transcript, speaker=target_speaker)
+            for sentence in sentences: # ...for each sentence in the file...
+                full_sentence = ""
+                for word in sentence:
+                    full_sentence = full_sentence + " " + word
+                if re.match(search_term, full_sentence):
+                    sentence_index = corpus_name.sents(transcript).index(sentence)
+                    corpus_search_results["filename"].append(transcript)
+                    corpus_search_results["age"].append(age)
+                    corpus_search_results["full_utterance"].append(sentence)
+                    if include_prior_utt == True:
+                        corpus_search_results["preceding_utterance"] = []
+                        corpus_search_results["preceding_utterance"].append(corpus_name.sents(transcript)[(int(sentence_index - 1))])
     print(f"The target speaker(s) {target_speaker} uses {search_term} {len(corpus_search_results)} total times.")
     return corpus_search_results
 
