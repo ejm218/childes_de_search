@@ -81,3 +81,12 @@ count_data = count_data.sort_values(by="age")
 
 #CREATING PLOT(s)
 count_data.plot("age", ["sentence_final", "vp_head", "np_head"], kind="bar")
+plt.savefig("headtype_raw.png")
+count_data.plot("age", "total_de", kind="scatter")
+plt.savefig("total_de_raw.png")
+
+# to do:
+# create new DF where heads are represented as percentages of total de counts
+count_data_normed = count_data.copy()
+for i in range(len(count_data_normed)):
+    count_data_normed.iloc[i]
