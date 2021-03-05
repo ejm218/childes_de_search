@@ -83,6 +83,10 @@ A corpus search was conducted using corpora available via the CHILDES database (
   \end{center}
 \end{table}
 
+Corpora were included if the youngest age in the corpus was no greater than three years old.
+
+The analysis was run using Natural Language Toolkit (NLTK)'s built-in corpus reader functionality for CHILDES. XML files for each database were downloaded and searched using a program written in Python. 
+
 \section{Results}
 
 \section{Discussion}

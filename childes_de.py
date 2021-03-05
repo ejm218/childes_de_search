@@ -1,6 +1,11 @@
 # IMPORT CHILDES SEARCH FUNCTIONS
 import os
 import matplotlib as plt
+import nltk
+import re
+from nltk.corpus.reader import CHILDESCorpusReader
+from collections import Counter
+import pandas as pd
 os.chdir("/Users/academic/Documents/childes_de_search")
 functions_file = open("childes_search.py", "r")
 functions_file = functions_file.read()
@@ -30,7 +35,7 @@ vp_search = "v:?[a-z]*" # finds all verbs
 #    corpus_data = corpus_search_MOR(corpus, "的")
 #    for item in corpus_data:
 #        data = data.append(corpus_data, ignore_index=True)
-data = create_df(multicorpus_search_MOR(corpora, "的"))
+data = create_df(multicorpus_search_MOR(corpora, "的(?!(?:时候|话))"))
 data = data.replace({"preceding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"succeeding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"preceding_item_type": vp_search}, "VP", regex=True)
@@ -38,6 +43,8 @@ data = data.replace({"succeeding_item_type": vp_search}, "VP", regex=True)
 print(data.head())
 print(data.tail())
 
+# INTERIM SUMMARY OF DataFrame
+print(f"DATA SUMMARY \n Age range: {data["age"].min()}-{data["age"].max()} months\n Number of head types: {data["succeeding_item_type"].nunique()}\n There are {len(data)} rows in the dataframe.")
 modifier_types = data["preceding_item_type"].value_counts()
 print(type(modifier_types))
 head_types = data["succeeding_item_type"].value_counts()

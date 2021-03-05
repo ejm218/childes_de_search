@@ -16,6 +16,7 @@ def corpus_search(corpus_list, search_term, target_speaker="CHI", include_prior_
         }
     transcripts = corpus_name.fileids()
     for corpus_name in corpus_list:
+        print(f"Now searching {corpus_name} for {search_term}...")
         for transcript in transcripts: # for each file within the given corpus...
             target_speaker = target_speaker
             age = corpus_name.age(fileids=transcript, month=True)
@@ -58,6 +59,7 @@ def corpus_search_MOR(corpus_name, search_term, target_speaker="CHI", include_pr
         "succeeding_item": [],
         "succeeding_item_type": []
         }
+    print(f"Now searching {corpus_name} for {search_term}...")
     transcripts = corpus_name.fileids()
     for transcript in transcripts:
         sentences = corpus_name.tagged_sents(transcript, speaker=target_speaker) # each sentence is a list of tuples
@@ -107,6 +109,7 @@ def multicorpus_search_MOR(corpus_list, search_term, target_speaker="CHI", inclu
         "succeeding_item_type": []
         }
     for corpus_name in corpus_list: # for each corpus in the list
+        print(f"Now searching {corpus_name} for {search_term}...")
         transcripts = corpus_name.fileids() # identify the transcript names
         for transcript in transcripts:
             sentences = corpus_name.tagged_sents(transcript, speaker=target_speaker) # each sentence is a list of tuples
