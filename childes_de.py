@@ -88,11 +88,38 @@ plt.savefig("total_de_raw.png")
 # to do:
 # create new DF where each column is represented as percentage of total de counts
 count_data_normed = count_data.copy()
+count_data_normed = count_data_normed.astype(float)
 for i in range(len(count_data_normed)):
     total_count = int(count_data_normed.at[i, "total_de"])
-    count_data_normed.at[i, "np_head"] = (int(count_data_normed.at[i, "np_head"]) / total_count)
-    count_data_normed.at[i, "vp_head"] = (int(count_data_normed.at[i, "vp_head"]) / total_count)
-    count_data_normed.at[i, "sentence_final"] = (int(count_data_normed.at[i, "sentence_final"]) / total_count)
-    count_data_normed.at[i, "prec_adj"] = (int(count_data_normed.at[i, "prec_adj"]) / total_count)
-    count_data_normed.at[i, "prec_np"] = (int(count_data_normed.at[i, "prec_np"]) / total_count)
-    count_data_normed.at[i, "prec_vp"] = (int(count_data_normed.at[i, "prec_vp"]) / total_count)
+    count_data_normed.at[i, "np_head"] = ((int(count_data_normed.at[i, "np_head"]) / total_count)*100)
+    count_data_normed.at[i, "vp_head"] = ((int(count_data_normed.at[i, "vp_head"]) / total_count)*100)
+    count_data_normed.at[i, "sentence_final"] = ((int(count_data_normed.at[i, "sentence_final"]) / total_count)*100)
+    count_data_normed.at[i, "prec_adj"] = ((int(count_data_normed.at[i, "prec_adj"]) / total_count)*100)
+    count_data_normed.at[i, "prec_np"] = ((int(count_data_normed.at[i, "prec_np"]) / total_count)*100)
+    count_data_normed.at[i, "prec_vp"] = ((int(count_data_normed.at[i, "prec_vp"]) / total_count)*100)
+
+# MORE PLOTS
+# comparing preceding item types by ages
+count_data_normed.plot("age", ["prec_adj", "prec_np", "prec_vp"], kind="bar")
+plt.xlabel("Age in months")
+plt.ylabel("Proportion of ADJ, NP, and VP preceding DE")
+plt.savefig("preceding_items.png")
+# comparing head types by age
+count_data_normed.plot("age", ["np_head", "vp_head"], kind="bar")
+plt.xlabel("Age in months")
+plt.ylabel("Proportion of NP and VP heads")
+plt.savefig("preceding_items.png")
+# scatter plot of VP heads over time
+count_data_normed.plot("age", "vp_head", kind="scatter")
+plt.xlabel("Age in months")
+plt.ylabel("Proportion VP heads")
+plt.savefig("vp_head_vs_age.png")
+
+# CALCULATE REGRESSION LINE AKA LINE OF BEST FIT
+from statistics import mean
+def get_regression_line(x ,y ):
+    m = (((mean(x)*mean(y)) - mean(x*y)) /
+         ((mean(x)*mean(x)) - mean(x*x)))
+    b = mean(y) - m*mean(x)
+    regression_line = [(m*value)+b for value in x]
+    return regression_line
