@@ -78,21 +78,21 @@ The acquisition path for \textit{de} is also interesting for a number of theoret
 \subsection{This study}
 \begin{example}
   \begin{CJK}{UTF8}{gbsn}
-    \glll 红色 的 _ 给 我 吧
-     hongse de _ gei wo ba
-     red DE _ give 1sg IMP
+    \glll 红色 的 给 我 吧
+     hongse de gei wo ba
+     red DE give 1sg IMP
      \glt 'Give me the red one'
      \glend
      \label{null-subj}
   \end{CJK}
 \end{example}
-The present study endeavors to answer several questions regarding the normal acquisition of the \textit{de} morpheme in Mandarin Chinese. Most importantly, we hope to determine at what point productive use of \textit{de} emerges, and in what contexts it appears in early child speech. With regard to the context in which it appears, a number of qualitative characteristics present themselves for further inspection, namely:
+The present study endeavors to answer several questions regarding the normal acquisition of the \textit{de} morpheme in Mandarin Chinese. Most importantly, we hope to determine at what point productive use of \textit{de} emerges, and in what contexts it appears in early child speech. With regard to the syntactic and semantic context in which it appears, a number of qualitative characteristics present themselves for further inspection, namely:
 
-\begin{\begin{enumerate}
+\begin{enumerate}
   \item[Preceding item] What types of items immediately precede \textit{de} in child speech? As demonstrated in the previous sections, \textit{de} can occur adjacent to a number of syntactic objects, including both nominals and predicates. If these different combinatorial possibilities represent distinct syntactic structures in the adult grammar, it is possible that the child learner would acquire each one at a different rate. On the other hand, if all of the possible uses of \textit{de} can be subsumed under a single notion of 'linking element,' as proposed by den Dikken and Singhepreecha, then we would expect to see all of the possible combinations emerge at the same time.
-  \item[Head type] Canonically, \textit{de} is used for complex nominals such as (\ref{adj-example}), (\ref{poss-example}), and (\ref{rc-example}). However, it can also appear in a sentence-final position in contexts like (\ref{prop-example}), where it combines with copular \textit{shi} to emphasize the preceding tense phrase. Furthermore, due to Mandarin's status as a radical pro-drop or 'topic-drop' language, both subject and object nominal phrases modified by \textit{de} can be omitted if the referent is previously established in the discourse, e.g. (\ref{null-subj}). In these cases, it would appear that the 'head' modified by \textit{de} is a predicate such as a VP or an adjective, when in fact it is an unpronounced NP. 
+  \item[Head type] Canonically, \textit{de} is used for complex nominals such as (\ref{adj-example}), (\ref{poss-example}), and (\ref{rc-example}). However, it can also appear in a sentence-final position in contexts like (\ref{prop-example}), where it combines with copular \textit{shi} to emphasize the preceding tense phrase. Furthermore, due to Mandarin's status as a radical pro-drop or 'topic-drop' language, both subject and object nominal phrases modified by \textit{de} can be omitted if the referent is previously established in the discourse, e.g. (\ref{null-subj}). In these cases, it would appear that the 'head' modified by \textit{de} is a predicate such as a VP or an adjective, when in fact it is an unpronounced NP.
   \item[]
-\end{enumerate}}
+\end{enumerate}
 
 \section{Method}
 A corpus search was conducted using corpora available via the CHILDES databank (MacWhinney, 2000). A complete list of the corpora used, along with their basic attributes, can be seen in Table (\ref{tab:corpora-summary}).
@@ -116,7 +116,7 @@ A corpus search was conducted using corpora available via the CHILDES databank (
 
 Corpora were included if the youngest age in the dataset was no greater than three years (36 months) old, providing a total of six different datasets to be considered in this analysis. Although a number of the corpora included older children, the maximum age included in this search was 48 months. The Erbaugh, Tong, and Zhou 3 corpora contain data from longitudinal studies of one or more Mandarin-acquiring children. The Erbaugh and Tong studies collected data approximately once a month for the duration of the study; the Zhou 3 authors collected data each month when the target child was between 20 and 30 months old, and then decreased the frequency to about every other month when the child was between 30 and 50 months old. After that, the frequency decreased further; however, this data is not included in the present analysis.
 
-The Zhou 1, Zhou 2, and Li Zhou corpora are cross-sectional studies conducted with a number of Mandarin-speaking children at kindergartens across Mainland China. The data in each of these corpora was collected during a single recording session. Thus, unlike the first three corpora, these data do not reflect the acquisition path for a single child, but are intended to reveal more general trends across age groups. The zhou 1 corpus contains data from 14, 20, 26, and 32 month old children. The Zhou 2 corpus divides its data into seven age groups: 36, 42, 48, 54, 60, 66, and 72 months old; however, only the first three age groups were included in this analysis.
+The Zhou 1, Zhou 2, and Li Zhou corpora are cross-sectional studies conducted with a number of Mandarin-speaking children at kindergartens across Mainland China. The data in each of these corpora was collected during a single recording session. Thus, unlike the first three corpora, these data do not reflect the acquisition path for a single child, but are intended to reveal more general trends across age groups. The Zhou 1 corpus contains data from groups of 14, 20, 26, and 32 month old children. Likewise, the Zhou 2 corpus divides its data into seven age groups: 36, 42, 48, 54, 60, 66, and 72 months old. The Li Zhou corpus contains data for children between ages three and six. In all cases, however, only data for children less than or equal to 48 months old were included. 
 
 The analysis was run in Python, using Natural Language Toolkit (NLTK, version 3.5)'s built-in corpus reader functionality for CHILDES. XML files for each database were downloaded from the TalkBank website and searched using a program written in Python (see \ref{code} for the complete code). Further analysis was carried out using the NumPy, Pandas (1.2.1), and Matplotlib packages.
 
