@@ -76,7 +76,23 @@ Despite its widespread use in the adult grammar and ongoing debate as to its typ
 The acquisition path for \textit{de} is also interesting for a number of theoretical reasons. Other morphemes with similar functions as \textit{de} cross-linguistically, such as the Saxon genitive (\textit{-s}) in English, are acquired only after three years of age (citation Radford and Galasso, 1998), similar to embedded relative clauses (cf. Berman 1997; Crain, McKee and Emiliani, 1990; others). However, both of these structures in Mandarin are marked using the \textit{de} morpheme, whereas they are wholy dissimilar in English and many other Indoeuropean languages; perhaps the greater flexibility with which it can be used in the target language would shorten the acquisition timeline. If this is the case, it would raise a number of questions regarding the role of both function and frequency on the acquisition of specific morphemes.
 
 \subsection{This study}
-The present study endeavors to answer several questions regarding the normal acquisition of the \textit{de} morpheme in Mandarin Chinese. Most importantly, we hope to determine at what point
+\begin{example}
+  \begin{CJK}{UTF8}{gbsn}
+    \glll 红色 的 _ 给 我 吧
+     hongse de _ gei wo ba
+     red DE _ give 1sg IMP
+     \glt 'Give me the red one'
+     \glend
+     \label{null-subj}
+  \end{CJK}
+\end{example}
+The present study endeavors to answer several questions regarding the normal acquisition of the \textit{de} morpheme in Mandarin Chinese. Most importantly, we hope to determine at what point productive use of \textit{de} emerges, and in what contexts it appears in early child speech. With regard to the context in which it appears, a number of qualitative characteristics present themselves for further inspection, namely:
+
+\begin{\begin{enumerate}
+  \item[Preceding item] What types of items immediately precede \textit{de} in child speech? As demonstrated in the previous sections, \textit{de} can occur adjacent to a number of syntactic objects, including both nominals and predicates. If these different combinatorial possibilities represent distinct syntactic structures in the adult grammar, it is possible that the child learner would acquire each one at a different rate. On the other hand, if all of the possible uses of \textit{de} can be subsumed under a single notion of 'linking element,' as proposed by den Dikken and Singhepreecha, then we would expect to see all of the possible combinations emerge at the same time.
+  \item[Head type] Canonically, \textit{de} is used for complex nominals such as (\ref{adj-example}), (\ref{poss-example}), and (\ref{rc-example}). However, it can also appear in a sentence-final position in contexts like (\ref{prop-example}), where it combines with copular \textit{shi} to emphasize the preceding tense phrase. Furthermore, due to Mandarin's status as a radical pro-drop or 'topic-drop' language, both subject and object nominal phrases modified by \textit{de} can be omitted if the referent is previously established in the discourse, e.g. (\ref{null-subj}). In these cases, it would appear that the 'head' modified by \textit{de} is a predicate such as a VP or an adjective, when in fact it is an unpronounced NP. 
+  \item[]
+\end{enumerate}}
 
 \section{Method}
 A corpus search was conducted using corpora available via the CHILDES databank (MacWhinney, 2000). A complete list of the corpora used, along with their basic attributes, can be seen in Table (\ref{tab:corpora-summary}).
