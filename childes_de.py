@@ -33,16 +33,26 @@ vp_search = "v:?[a-z]*" # finds all verbs
 #    for item in corpus_data:
 #        data = data.append(corpus_data, ignore_index=True)
 data = create_df(multicorpus_search_MOR(corpora, "的(?!(?:时候|话))"))
+data = data[data.age <= 48]
 data = data.replace({"preceding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"succeeding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"preceding_item_type": vp_search}, "VP", regex=True)
 data = data.replace({"succeeding_item_type": vp_search}, "VP", regex=True)
+print(f"The full dataset contains {len(data)} utterances between {data.age.min()} and {data.age.max()} months.")
+#modifier_types = data["preceding_item_type"].value_counts()
+#print(type(modifier_types))
+#head_types = data["succeeding_item_type"].value_counts()
+#print(head_types)
+#variety = data["preceding_item_type"].nunique()
+#print(variety)
 
 # SUBSETS
 tong_data = data[data.filename.str.contains("Tong.*")==True]
 print(f"There are {len(tong_data)} de utterances in the Tong dataset.}")
 erbaugh_data = data[data.filename.str.contains("Erbaugh.*")==True]
 print(f"There are {len(erbaugh_data)} de utterances in the Erbaugh dataset.}")
+zhou1_data = data[data.filename.str.contains("Zhou1.*")==True]
+print(f"There are {len(zhou1_data)} de utterances in the Zhou 1 dataset.}")
 zhou3_data = data[data.filename.str.contains("Zhou3.*")==True]
 print(f"There are {len(zhou3_data)} de utterances in the Zhou 3 dataset.}")
 data_24to30 = pd.concat([tong_data, erbaugh_data, zhou3_data])
@@ -52,16 +62,6 @@ print(f"There are {len(data_24to30)} de utterances in the 24-30 month dataset.}"
 data_36to48 = data[data.age >= 36]
 data_36to48 = data_36to48[data_36to48.age <= 48]
 print(f"There are {len(data_36to48)} de utterances in the 36-48 month dataset.}")
-
-# INTERIM SUMMARY OF DataFrame
-print(f"DATA SUMMARY \n Age range: {data['age'].min()}-{data['age'].max()} months\n Number of head types: {data['succeeding_item_type'].nunique()}\n There are {len(data)} rows in the dataframe.\n Now printing first five rows: ")
-#modifier_types = data["preceding_item_type"].value_counts()
-#print(type(modifier_types))
-#head_types = data["succeeding_item_type"].value_counts()
-#print(head_types)
-#variety = data["preceding_item_type"].nunique()
-#print(variety)
-print(data.head())
 
 # CREATE FREQUENCY SUBSETS
 ages = list(set(data["age"].tolist()))
