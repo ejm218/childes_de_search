@@ -21,24 +21,26 @@ zhou2 = CHILDESCorpusReader(corpus_root, "Zhou2/.*.xml") # youngest age 3;0
 zhou3 = CHILDESCorpusReader(corpus_root, "Zhou3/.*.xml") # youngest age 0;8
 corpora = [erbaugh, lizhou, tong, zhou1, zhou2, zhou3]
 
-# what do I want to find out
-# when de emerges
-# what types of items it is used to modify
 np_search = "n:?[a-z]*|pro:?[a-z]*" # finds all nouns and pronouns
 vp_search = "v:?[a-z]*" # finds all verbs
 
-#data = pd.DataFrame(columns = ["filename", "age", "full_utterance", "search_term_tag", "preceding_item", "preceding_item_type", "succeeding_item", "succeeding_item_type"])
-#for corpus in corpora:
-#    corpus_data = corpus_search_MOR(corpus, "的")
-#    for item in corpus_data:
-#        data = data.append(corpus_data, ignore_index=True)
 data = create_df(multicorpus_search_MOR(corpora, "的(?!(?:时候|话))"))
 data = data[data.age <= 48]
 data = data.replace({"preceding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"succeeding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"preceding_item_type": vp_search}, "VP", regex=True)
 data = data.replace({"succeeding_item_type": vp_search}, "VP", regex=True)
+data = data.loc[data["succeeding_item_type"] != ""]
+data = data.loc[data["succeeding_item_type"] != "poss"]
+data = data.loc[data["succeeding_item_type"] != "chi"]
+data = data.loc[data["succeeding_item_type"] != "cl"]
 data.loc[data["succeeding_item"] == "是", "succeeding_item_type"] = "cop"
+data.loc[data["succeeding_item_type"] == "sfp", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "co", "succeeding_item_type"] = "det"
+data.loc[data["succeeding_item_type"] == "co:iNP", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "coNP", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "asp", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "quaNP", "succeeding_item_type"] = "adj"
 print(f"The full dataset contains {len(data)} utterances between {data.age.min()} and {data.age.max()} months.")
 #modifier_types = data["preceding_item_type"].value_counts()
 #print(type(modifier_types))
@@ -64,7 +66,7 @@ data_36to48 = data[data.age >= 36]
 data_36to48 = data_36to48[data_36to48.age <= 48]
 print(f"There are {len(data_36to48)} de utterances in the 36-48 month dataset.}")
 
-# CREATE FREQUENCY SUBSETS
+# CREATE FREQUENCY DATASETS
 ages = list(set(data["age"].tolist()))
 count_data = {
     "age": [],

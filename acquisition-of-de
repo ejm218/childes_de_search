@@ -141,7 +141,7 @@ Finally, an additional dataset was created containing utterances from children b
 \subsection{Data omissions}
 Several types of items appeared in the initial search for items immediately following \textit{de} that were either incorrectly coded or otherwise warranted removal from the data. After manually inspection, one utterance was excluded containing each of the following morphological tags: 'possessive', 'chi', and 'classifier.' Some results were also collapsed into single categories for ease of analysis, for instance, all verbs with the exception of \textit{shi} were tagged as VP. When \textit{de} was followed by an item tagged as a 'sentence-final particle (SFP),' the utterance was assigned to the 'sentence final' category. Likewise, if \textit{de} was followed by the aspectual marker \textit{le}, the utterance was tagged as containing a sentence-final usage.
 
-Following these adjustments, there were a total of utterances in the dataset. 
+Following these adjustments, there were a total of  utterances in the dataset.
 
 \section{Results}
 
