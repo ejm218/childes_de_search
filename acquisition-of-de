@@ -11,9 +11,9 @@
 \date{}
 \begin{document}
 \section{Introduction}
-Both the semantic and syntactic characteristics of de have been a source of contention in the literature for well over forty years now.
+Both the semantic and syntactic characteristics of \textit{de} have been a source of contention in the literature for well over forty years now.
 
-One reason for this disgruntlement may be that de wears many hats in Modern Mandarin and can combine with a large number of syntactic objects. When the target of modification is a noun phrase (NP), for instance, de may appear adjacent to an adjectival phrase (\ref{adj-example}), a possessive phrase (\ref{poss-example}), a prepositional phrase (PP) (\ref{pp-example}), or an inflectional phrase (i.e. as a complementizer) (\ref{rc-example}).
+One reason for this disgruntlement may be that \textit{de} wears many hats in Modern Mandarin and can combine with a large number of syntactic objects. When the target of modification is a noun phrase (NP), for instance, \textit{de} may appear adjacent to an adjectival phrase (\ref{adj-example}), a possessive phrase (\ref{poss-example}), a prepositional phrase (PP) (\ref{pp-example}), or an inflectional phrase (i.e. as a complementizer) (\ref{rc-example}).
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
@@ -64,35 +64,68 @@ Furthermore, there is a phonetically identical element that allows modification 
 \end{examples}
 
 \section{Acquisition of de}
-Despite its widespread use in the adult grammar and ongoing debate as to its typological characteristics, nobody to date has examined the development of de in the grammar of Mandarin-speaking children. Like many linguistic phenomena, acquisition data may provide us with deep insight into the role that this particle plays in the grammar.
+Despite its widespread use in the adult grammar and ongoing debate as to its typological characteristics, nobody to date has examined the development of \textit{de} in the grammar of Mandarin-speaking children. Like many linguistic phenomena, acquisition data may provide us with deep insight into the role that this particle plays in the grammar.
+
+The acquisition path for \textit{de} is also interesting for a number of theoretical reasons. Other morphemes with similar functions as \textit{de} cross-linguistically, such as the Saxon genitive (\textit{-s}) in English, are acquired only after three years of age (citation Radford and Galasso, 1998), similar to embedded relative clauses (cf. Berman 1997; Crain, McKee and Emiliani, 1990; others). However, both of these structures in Mandarin are marked using the \textit{de} morpheme, whereas they are wholy dissimilar in English and many other Indoeuropean languages; perhaps the greater flexibility with which it can be used in the target language would shorten the acquisition timeline. If this is the case, it would raise a number of questions regarding the role of both function and frequency on the acquisition of specific morphemes.
 
 \section{Method}
 A corpus search was conducted using corpora available via the CHILDES database (MacWhinney, 2000). A complete list of the corpora used, along with their basic attributes, can be seen in Table (\ref{tab:corpora-summary}).
 
 \begin{table}[h!]
   \begin{center}
-    \begin{tabular}{l|l|l|l} % <-- Alignments
-      \textbf{Corpus name} & \textbf{Age range} & \textbf{Number of files} & \textbf{Author}\\
+    \begin{tabular}{l|l|l|l|l} % <-- Alignments
+      \textbf{Corpus name} & \textbf{Author} & \textbf{Age range (mo)} & \textbf{Type} & \textbf{Collection frequency}\\
       \hline
-      Chang 1 & xxx & xxx & xxx \\
-      Chang 2 & xxx & xxx & xxx \\
-      Chang Play & xxx & xxx & xxx \\
+      Erbaugh & Mary Erbaugh and Linhui Li & 24-45 & Longitudinal & Monthly \\
+      Tong & Xiangjun Deng and Virginia Yip & 19-40 & Longitudinal & Monthly \\
+      Zhou 3 & Jing Zhou & 8-52 & Longitudinal & Monthly (20-30mo), Bimonthly (30-50mo) \\
+      Zhou 2 & Jing Zhou & 36-72 & Cross-sectional & Single session \\
+      Zhou 1 & Jing Zhou & 14-32 & Cross-sectional & Single session \\
+      LiZhou & Linhui Li and Jing Zhou & 36-72 & Cross-sectional & Single session \\
     \end{tabular}
     \caption{Basic information about the corpora used in the search.}
     \label{tab:corpora-summary}
   \end{center}
 \end{table}
 
-Corpora were included if the youngest age in the corpus was no greater than three years old.
+Corpora were included if the youngest age in the dataset was no greater than three years (36 months) old. Although a number of the corpora included older children, the maximum age included in this search was 48 months.
 
-The analysis was run using Natural Language Toolkit (NLTK)'s built-in corpus reader functionality for CHILDES. XML files for each database were downloaded and searched using a program written in Python.
+The analysis was run in Python, using Natural Language Toolkit (NLTK)'s built-in corpus reader functionality for CHILDES. XML files for each database were downloaded from the TalkBank website and searched using a program written in Python (see \ref{code} for the complete code). Further analysis was carried out using the NumPy, Pandas, and Matplotlib packages.
 
 \begin{CJK}{UTF8}{gbsn}
-  Two common expressions containing de were excluded from the dataset. The first, 的时候, translates roughly to English \textem{while} and occurs in IP-final position. The other exluded expression, 的话, also occurs IP-finally and can be translated as \textem{if} or \textem{in the case that...}. 
+  Two common expressions containing \textit{de} were excluded from the search criteria. The first, 的时候, translates roughly to English 'while' and occurs in IP-final position. The other exluded expression, 的话, also occurs IP-finally and can be translated as 'if' or 'in the case that...'. Because the primary purpose of this analysis is to determine when and how Mandarin acquiring children begin to use \textit{de} productively, their ability to use it in a set phrase such as these was not considered relevant to the present research question.
 \end{CJK}
+
+More than 6,000 child utterances resulted from the initial search, excluding the two aforementioned expressions. From this general dataset, I create several subsets of data in order to give a more accurate reflection of the distributions. Each of these subsets will be briefly characterized below.
+
+The Erbaugh (citation), Zhou 3 (citation), and Tong (citation) corpora were each searched and analyzed individually. The reason for this is that each corpus collected its samples beginning at slightly different ages, and with differing regularity, thus a dataset which combines all results for these corpora might falsely inflate the number of \textit{de} uses for overlapping ages, while underrepresenting the number of uses for age ranges that were only collected by one or two of the studies. The Zhou 3 corpus, for instance, began collecting data when the child was eight months old, whereas the Erbaugh corpus began collecting data at 24 months. Thus, there is less data for the only data for e.g. 8 to 15 months comes only from Zhou 3, which could misconstrue the raw numbers. There were 587 total \textit{de} utterances contained in the Tong corpus; 566 in the Zhou 3 corpus; and 1,987 in the Erbaugh corpus. The comparative extensiveness of the Erbaugh corpus should be kept in mind when comparing results to other corpora in this analysis.
+
+There is an overlap between 24 and 30 months old during which period all three studies collected data on a monthly basis, albeit for different lengths of time. Since the representativeness of the data would be more comparable for this period, an additional subset of data consisting of utterances from all three corpora was created. The total number of utterances in this dataset was 592. Finally, an additional dataset was created containing utterances from children between 36 and 48 months old. These included data from the Erbaugh, Tong, and Zhou 3 corpora, as well as additional corpora that can be viewed in Table (\ref{tab:corpora-summary}). This was a particularly robust data set, as many of the Mandarin corpora in CHILDES began their study around the child(ren)'s third birthday. The total number of utterances contained in this subset was 2,361 utterances.
+
 
 \section{Results}
 
+
+\subsection{Earliest uses}
+\begin{example}
+  \begin{CJK}{UTF8}{gbsn}
+    Zhou1/cs14b.xml (1;02)
+      \glll 要 的
+       yao de
+       need DE
+       \glt 'need/should'
+       \glend
+       \label{14mo-example}
+  \end{CJK}
+\end{example}
+
+The youngest age at which \textit{de} was used by a child was fourteen months old (see (\ref{14mo-example})); however, this was limited to a single utterance in the Zhou 1 corpus (citation). \textit{De} did not appear again in the same corpus (or any other corpora, for that matter) until twenty months old, at which point it is used twelve times by the same child, and once each by two children from the Tong and Zhou 3 corpora. In eight of the fourteen total utterances containing \textit{de} at 20 months old, \textit{de} occurs in a sentence-final position. In the remaining six non-SF utterances, the head items (i.e. the word which is modified by de) consist of four nouns, one adjective, and one verb.
+
+From the onset of the two-word utterance phase,
+
 \section{Discussion}
+
+\section{Appendix} \label{code}
+\include{childes_de.py}
 
 \end{document}
