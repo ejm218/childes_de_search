@@ -38,6 +38,7 @@ data = data.replace({"preceding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"succeeding_item_type": np_search}, "NP", regex=True)
 data = data.replace({"preceding_item_type": vp_search}, "VP", regex=True)
 data = data.replace({"succeeding_item_type": vp_search}, "VP", regex=True)
+data.loc[data["succeeding_item"] == "是", "succeeding_item_type"] = "cop"
 print(f"The full dataset contains {len(data)} utterances between {data.age.min()} and {data.age.max()} months.")
 #modifier_types = data["preceding_item_type"].value_counts()
 #print(type(modifier_types))
