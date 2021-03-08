@@ -157,7 +157,29 @@ for age in ages:
     zhou3_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
 zhou3_count_data = create_df(zhou3_count_data)
 zhou3_count_data = zhou3_count_data[zhou3_count_data.total_de > 0]
-print(f"Created DF zhou3_count_data with {len(zhou3_count_data)} rows.")
+zhou1_count_data = {
+    "age": [],
+    "total_de": [],
+    "np_head": [],
+    "vp_head": [],
+    "sentence_final": [],
+    "prec_adj": [],
+    "prec_np": [],
+    "prec_vp": []
+    }
+for age in ages:
+    target_data = zhou1_data[(zhou1_data["age"] == age)]
+    zhou1_count_data["age"].append(age)
+    zhou1_count_data["total_de"].append(len(target_data))
+    zhou1_count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
+    zhou1_count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
+    zhou1_count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
+    zhou1_count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
+    zhou1_count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
+    zhou1_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
+zhou1_count_data = create_df(zhou1_count_data)
+zhou1_count_data = zhou1_count_data[zhou3_count_data.total_de > 0]
+print(f"Created DF zhou1_count_data with {len(zhou1_count_data)} rows.")
 etz_count_data = {
     "age": [],
     "total_de": [],
@@ -206,6 +228,7 @@ older_count_data = older_count_data[older_count_data.total_de > 0]
 print(f"Created DF older_count_data with {len(older_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
 
 #CREATING PLOT(s)
+print("Now generating plots...")
 count_data.plot("age", ["sentence_final", "vp_head", "np_head"], kind="bar")
 plt.savefig("headtype_raw.png")
 count_data.plot("age", "total_de", kind="scatter")
