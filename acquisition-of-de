@@ -87,7 +87,7 @@ Further complicating the data is the fact that the absence or presence of \texti
   \end{CJK}
 \end{examples}
 
-Thus, while it is mandatory in most nominal modification structures, any theoretical account of \textit{de} must also account for the option to omit it given the right circumstances.  
+Thus, while it is mandatory in most nominal modification structures, any theoretical account of \textit{de} must also account for the option to omit it given the right circumstances.
 
 \subsection{Theoretical Accounts}
 Given its vast range of applications within a sentence, a number of questions remain as to the exact characterization of \textit{de} in Mandarin. Could it be, as proposed by Li and Thompson (1981), that there are several different \textit{de}s in Mandarin, each one roughly corresponding to one of the above examples? Or are there only two types of \textit{de}, a head-initial and a head-final complementizer, as put forth by Cheng (1986)? Many early analyses of \textit{de} appear to focus solely on a subset of its possible uses in Mandarin. For example, Li (1985) argues that \textit{de} is a case marker similar to English genitive \textit{-s}, an analysis which does not particularly suit its application in adjectives and relative clauses (which she points out in the same paper). These early attempts to characterize \textit{de} left Sinologists and East Asian linguists largely dissatisfied.
@@ -177,9 +177,75 @@ Several types of MOR (part of speech) tags appeared in the initial search for it
   \end{CJK}
 \end{example}
 
-The youngest age at which \textit{de} was used by a child was fourteen months old (see (\ref{14mo-example})); however, this was limited to a single utterance in the Zhou 1 corpus (citation). \textit{De} did not appear again in the same corpus (or any other corpora, for that matter) until twenty months old, at which point it is used twelve times by the same child, and once each by two children from the Tong and Zhou 3 corpora. In eight of the fourteen total utterances containing \textit{de} at 20 months old, \textit{de} occurs in a sentence-final position. In the remaining six non-SF utterances, the head items (i.e. the word which is modified by de) consist of four nouns, one adjective, and one verb.
+The youngest age at which \textit{de} was used by a child was fourteen months old (see (\ref{14mo-example})); however, this was limited to a single utterance in the Zhou 1 corpus (citation). \textit{De} did not appear again in the same corpus (or any other corpora, for that matter) until twenty months old, at which point it is used twelve times by the same child, and once each by two children from the Tong and Zhou 3 corpora. Each child implements a different function of \textit{de} during this period: for example, in (\ref{20mo-vp1}), the child in the Zhou 3 corpus uses it to link a VP \textit{xie zi} 'to write characters' with the NP 'pen.' On the other hand, in (\ref{20mo-poss}) and (\ref{20mo-vp2}), a child from the Zhou 1 corpus uses it in a possessive construction and an adjectival construction respectively. The child from the Tong corpus uses it first to link an adjective to the head NP in (\ref{20mo-adj}).
 
-From the onset of the two-word utterance phase,
+In eight of the fourteen total utterances containing \textit{de} at 20 months old, \textit{de} occurs in a sentence-final position. In the remaining six non-SF utterances, the head items (i.e. the word which is modified by de) seems to consist of four nouns, one adjective, and one verb.
+
+\begin{examples}
+  \begin{CJK}{UTF8}{gbsn}
+    \item\label{20mo-vp1} Zhou3/010805.xml (1;08)
+      \glll 写 字 的 笔
+       xie zi de bi
+       write character DE pen
+       \glt 'A pen for writing characters'
+       \glend
+    \item\label{20mo-poss} Zhou1/ld20m.xml (1;08)
+      \glll 这 个 是 它 的 录音
+       zhe ge shi ta de luyin
+       this CL be 3sg DE recording
+       \glt 'This is its recording'
+       \glend
+     \item\label{20mo-vp2} Zhou1/ld20m.xml (1;08)
+       \glll 这 个 是 插 的
+        zhe ge shi cha de
+        this CL be insert DE
+        \glt 'This is the one that plugs in'
+        \glend
+    \item\label{20mo-adj} Tong/010718.xml (1;08)
+      \glll 白色 的
+       baise de
+       white DE
+       \glt 'The white one'
+       \glend
+  \end{CJK}
+\end{examples}
+
+Four children in the target corpora seem to have acquired \textit{de} by twenty months old; however, productivity remains limited for at least three of them. The fourth child, whose data comes from the Zhou 1 corpus, appears to have acquired a broader range of uses for \textit{de}: out of the eight utterances, five modify nominals and three occur sentence-finally.
+
+At twenty-one months, several more children have begun to use \textit{de} in spontaneous speech. The bulk of utterances for this age range consist of possessive constructions; however, there are also a few instances where \textit{de} is paired with an adjective or VP.
+
+\begin{examples}
+  \begin{CJK}{UTF8}{gbsn}
+    \item\label{21mo-poss} Zhou1/cs20b.xml (1;09)
+      \glll 大 灰 狼 的 尾巴
+       da hui lang de weiba
+       big grey wolf DE tail
+       \glt "The Big Bad Wolf's tail"
+       \glend
+    \item\label{21mo-adj} Zhou1/cs20o.xml (1;09)
+      \glll 黑 颜色 的
+       hei yanse de
+       black color DE
+       \glt "The black one"
+       \glend
+     \item\label{21mo-vp} Tong/010822.xml (1;09)
+       \glll 爸爸 炒 的
+        baba chao de
+        daddy stirfry DE
+        \glt "Daddy stirfries" / "What Daddy stirfries"
+        \glend
+    \item\label{21mo-poss2} Tong/010822.xml (1;09)
+      \glll 妈妈 的 a3 卡
+       mama de a3 ka
+       mommy DE a3 car
+       \glt "Mommy's car"
+       \glend
+  \end{CJK}
+\end{examples}
+
+Again, approximately half of the 39 utterances containing \textit{de} have it in sentence-final position.
+
+Around their second birthday, we see a considerable decrease in the proportion of sentence-final \textit{de}s for the children in the Tong and Erbaugh corpora, and an increase in their use in the Zhou 3 corpus. The proportion of sentence-final utterances also decreases between the 14, 20, and 21-month-old groups in the Zhou 1 dataset.  
 
 \section{Discussion}
 
