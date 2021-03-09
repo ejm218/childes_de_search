@@ -48,6 +48,9 @@ INPUT acquisition-of-de.aux
 OUTPUT acquisition-of-de.aux
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.bdg
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
@@ -80,13 +83,14 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu7d.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu57.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu95.tfm
 INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu54.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu68.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu7e.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu82.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu54.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.enc
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/cjk/texinput/UTF8/UTF8.chr
@@ -110,6 +114,7 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu62.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu65.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu66.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu67.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu68.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu70.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu75.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu76.pfb
@@ -123,6 +128,7 @@ INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8d.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8f.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu95.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu96.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb

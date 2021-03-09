@@ -20,31 +20,31 @@ Both the semantic and syntactic characteristics of \textit{de} have been a sourc
         \glll 胖 的 孩子
          pang de haizi
          fat DE child
-         \glt 'fat child'
+         \glt "fat child"
          \glend
     \item\label{poss-example}
         \glll 张三 的 卡车
         zhangsan de kache
         Zhangsan DE car
-        \glt 'Zhangsan's car'
+        \glt "Zhangsan's car"
         \glend
     \item\label{pp-example}
         \glll 电影院 的 旁边
         dianyingyuan de pangbian
         cinema DE next-to
-        \glt 'next to the cinema'
+        \glt "next to the cinema"
         \glend
     \item\label{rc-example}
         \glll 李斯 昨天 买 的 书　
         lisi zuotian mai de shu
         Lisi yesterday buy DE book
-        \glt 'The book that Lisi bought yesterday'
+        \glt "The book that Lisi bought yesterday"
         \glend
     \item\label{prop-example}
         \glll 我 是 从来 不 抽 烟 的　
         wo shi conglai bu chou yan de
         1sg be ever NEG inhale smoke DE
-        \glt '(It is the case that) I never smoked' (example from Paul (2010))
+        \glt "(It is the case that) I never smoked" (example from Paul (2010))
         \glend
   \end{CJK}
 \end{examples}
@@ -57,21 +57,18 @@ Furthermore, there is a phonetically identical element that allows modification 
         \glll 跑 得 快
          pao de kuai
          run DE fast
-         \glt 'to run fast'
+         \glt "to run fast"
          \glend
     \item\label{vp-example2}
         \glll 紧张 地 问
         jinzhang de wen
         nervous DE ask
-        \glt 'to ask nervously'
+        \glt "to ask nervously"
         \glend
   \end{CJK}
 \end{examples}
 
-\subsection{Theoretical Accounts}
-Given its vast range of applications within a sentence, a number of questions remain as to the exact characterization of \textit{de} in Mandarin. Could it be, as proposed by Li and Thompson (1981), that there are several (functionally) different \textit{de}s in Mandarin, each one roughly corresponding to one of the above examples? Or are there only two types of \textit{de}, a head-initial and a head-final complementizer, as put forth by Cheng (1986)? More recently, den Dikken and Singhepreecha (2004) proposed a unified 'linker' analysis, whereby \textit{de} is used to generate complex NPs by embedding a predicate inside the NP, and can therefore be combined with any predicative object in order to modify a nominal phrase. In more concrete terms, they assert that the modifying XP originates in the predicative position of an utterance with the NP as its subject, and is subsequently raised to SpecNP and linked to the head noun via insertion of \textit{de}. Paul (2010) refutes this, however, on the basis that this interpretation incorrectly predicts that certain XPs can precede \textit{de} to modify a NP. Furthermore, he argues, this analysis does not accurately reflect the canonical SVO word order of Mandarin. He proposes instead that as a non-root C(omplementizer) in constructions such as (\ref{rc-example})
-
-The absence or presence of \textit{de} in a given utterance is subject to certain semantic considerations of both the modifier and the modified NP. For instance, \textit{de} can be omitted before kinship terms when the modifying DP is a pronoun, as in (\ref{poss-no-de}). It can also be omitted in structures such as (\ref{np-no-de}), albeit with an interpretative shift.
+Further complicating the data is the fact that the absence or presence of \textit{de} in a given utterance is subject to certain semantic considerations. For instance, \textit{de} can be omitted before kinship terms when the modifying DP is a pronoun, as in (\ref{poss-no-de}). It can also be omitted in structures such as (\ref{np-no-de}), albeit with an interpretative shift.
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
@@ -79,16 +76,23 @@ The absence or presence of \textit{de} in a given utterance is subject to certai
         \glll 她 (的) 哥哥
          3sgFEM (de) gege
          she (DE) older-brother
-         \glt 'her older brother'
+         \glt "her older brother"
          \glend
     \item\label{np-no-de}
         \glll 木头 (的) 桌子
         mutou (de) zhuozi
         wood (DE) table
-        \glt 'a wooden table' (example from Paul (2010))
+        \glt "a wooden table" (example from Paul (2010))
         \glend
   \end{CJK}
 \end{examples}
+
+Thus, while it is mandatory in most nominal modification structures, any theoretical account of \textit{de} must also account for the option to omit it given the right circumstances.  
+
+\subsection{Theoretical Accounts}
+Given its vast range of applications within a sentence, a number of questions remain as to the exact characterization of \textit{de} in Mandarin. Could it be, as proposed by Li and Thompson (1981), that there are several different \textit{de}s in Mandarin, each one roughly corresponding to one of the above examples? Or are there only two types of \textit{de}, a head-initial and a head-final complementizer, as put forth by Cheng (1986)? Many early analyses of \textit{de} appear to focus solely on a subset of its possible uses in Mandarin. For example, Li (1985) argues that \textit{de} is a case marker similar to English genitive \textit{-s}, an analysis which does not particularly suit its application in adjectives and relative clauses (which she points out in the same paper). These early attempts to characterize \textit{de} left Sinologists and East Asian linguists largely dissatisfied.
+
+More recently, den Dikken and Singhepreecha (2004) proposed a unified 'linker' analysis, whereby \textit{de} is used to generate complex NPs by embedding a predicate inside the NP, and can therefore be combined with any predicative object in order to modify a nominal phrase. The underlying structure, they argue, is a traditional subject-predicate order, whereby the modifying XP originates in the predicative position of an utterance with the NP as its subject, and is subsequently raised to SpecNP and linked to the head noun via insertion of \textit{de}. Paul (2010) refutes this, however, on the basis that this interpretation incorrectly predicts that certain XPs can precede \textit{de} to modify a NP. Furthermore, he highlights several possible NP modification structures in Mandarin that should not exist, were this analysis correct. He does not, however, propose an alternative. Thus, the debate as to \textit{de}'s true nature rages on.
 
 \section{Acquisition of de}
 \subsection{Past findings}
@@ -102,7 +106,7 @@ The acquisition path for \textit{de} is also interesting for a number of theoret
     \glll 红色 的 给 我 吧
      hongse de gei wo ba
      red DE give 1sg IMP
-     \glt 'Give me the red one'
+     \glt "Give me the red one"
      \glend
      \label{null-subj}
   \end{CJK}
@@ -153,12 +157,10 @@ The Erbaugh (citation), Tong (citation), Zhou 1 (citation), and Zhou 3 (citation
 
 There is an overlap between 24 and 30 months old during which period all the Tong, Erbaugh, and Zhou 3 studies collected data on a monthly basis, albeit for different lengths of time. Since the representativeness of the data would be more comparable for this period, and the ages targeted tend to constitute a period of considerable progress in the acquisition of syntax, an additional subset of data consisting of utterances from all three corpora was created. The total number of utterances in this dataset was 582.
 
-Finally, an additional dataset was created containing utterances from children between 36 and 48 months old. These included data from the aforementioned corpora, as well as two additional corpora that can be viewed in Table (\ref{tab:corpora-summary}). This was a particularly robust data set, containing 2,054 total utterances. 
+Finally, an additional dataset was created containing utterances from children between 36 and 48 months old. These included data from the aforementioned corpora, as well as two additional corpora that can be viewed in Table (\ref{tab:corpora-summary}). This was a particularly robust data set, containing 2,054 total utterances.
 
 \subsection{Data omissions}
-Several types of MOR (part of speech) tags appeared in the initial search for items immediately following \textit{de} that were either incorrectly coded, overlapped with existing tags, or otherwise warranted removal from the dataset. Following a manual inspection, three utterances were excluded containing each of the following morphological tags: 'possessive', 'chi', and 'classifier.' Some results were also collapsed into single categories for ease of analysis, for instance, all verbs with the exception of \textit{shi} were tagged as VP (\textit{shi} was tagged as a copular verb). When \textit{de} was followed by an item tagged as a 'sentence-final particle (SFP),' the utterance was assigned to the 'sentence final' category. Likewise, if \textit{de} was followed by the aspectual marker \textit{le} or a conjunction such as \textit{yinwei} 'because', the utterance was tagged as sentence-final.
-
-Following these adjustments, there were a total of  utterances in the dataset.
+Several types of MOR (part of speech) tags appeared in the initial search for items immediately following \textit{de} that were either incorrectly coded, overlapped with existing tags, or otherwise warranted removal from the dataset. Some results were also collapsed into single categories for ease of analysis, for instance, all verbs with the exception of \textit{shi} were tagged as VP (\textit{shi} was tagged as a copular verb). When \textit{de} was followed by an item tagged as a 'sentence-final particle (SFP),' the utterance was assigned to the 'sentence final' category. Likewise, if \textit{de} was followed by the aspectual marker \textit{le} or a conjunction such as \textit{yinwei} 'because', the utterance was tagged as sentence-final. An 'other' tag was created for infrequent values that occurred only a handful of times in the data. This included items tagged as 'possessive', 'chi', and 'classifier,' among a few others.
 
 \section{Results}
 

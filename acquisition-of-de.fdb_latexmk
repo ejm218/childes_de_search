@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1615237303 "acquisition-of-de" "acquisition-of-de.pdf" "acquisition-of-de" 1615237304
+["pdflatex"] 1615303051 "acquisition-of-de" "acquisition-of-de.pdf" "acquisition-of-de" 1615303052
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu30.tfm" 1198435261 1252 fec599f1363dee7f5677ebd04aaa877b ""
@@ -15,6 +15,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu65.tfm" 1136768653 1268 43d709fc25fb473677bf40e490c90fee ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu66.tfm" 1136768653 1288 5fd96480d0003bccefa23c7abc8c6d30 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu67.tfm" 1136768653 1288 ee87cc28b5e1591571b747d6f41b7a7a ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu68.tfm" 1136768653 1276 b428e478e602dc1b9723dea60b8af584 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu70.tfm" 1198435261 1212 1207faefb0b4884023dcb0f65ded29a5 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu75.tfm" 1136768653 1272 2aec17a41bae2661752e984902515ee3 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu76.tfm" 1198435261 1284 81a646d1e773f55ab59473430c380aa7 ""
@@ -28,6 +29,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu8f.tfm" 1136768653 872 568436628e9b8c25cb1e0a265f39f5e5 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu95.tfm" 1198435261 1284 23688f543f05b4153f1b60033c31518f ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/arphic/gbsnu/gbsnu96.tfm" 1136768653 1284 2d4576ca9e8b59ddfdbadd773c3ba273 ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbi1200.tfm" 1136768653 3072 ccae1a240ab272417e4399fe942df546 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1136768653 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -48,6 +50,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu65.pfb" 1198435261 53061 d9b08770021dd29a1730a8f207d07283 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu66.pfb" 1198435261 47907 3001c2f04b7d6c7cf2fd3064ef7283c2 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu67.pfb" 1198435261 57899 77be8b631c2ea7a76cacef3efd46c3c4 ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu68.pfb" 1198435261 59321 d803fc51618609b7e432141d1c1f4078 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu70.pfb" 1198435261 40221 7ce14d2bb95282cb38f3d0e44aecbf8a ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu75.pfb" 1198435261 60236 debc19560f8462fc1f647612033f7dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu76.pfb" 1198435261 56778 f29f454b48a124a31e334a0a7b495891 ""
@@ -61,6 +64,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu8f.pfb" 1198435261 58519 2ce99ce05c0777c1d804ee60f14316eb ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu95.pfb" 1198435261 86563 f153ef8ef3ad2774595a2dda45a0d671 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/arphic/gbsnu/gbsnu96.pfb" 1198435261 66773 db9d894a943a7e1c521daea4a73310e6 ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb" 1215737283 205875 5958bf9326f04501f7006947acfbcae1 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb" 1215737283 145408 43d44302ca7d82d487f511f83e309505 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb" 1215737283 140176 d4962f948b4cc0adf4d3dde77a128c95 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb" 1215737283 135942 859a90cad7494a1e79c94baf546d7de5 ""
@@ -96,9 +100,9 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1586288259 2432462 fd0fa20e9a3cb5f8169fd0ba1c955158 ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "acquisition-of-de" 1615237302 14181 05a91e985e6326a614597fa196cab0b5 ""
-  "acquisition-of-de.aux" 1615237304 1535 1c5e3a5387174e1609f9d461a01b6a6e "pdflatex"
+  "acquisition-of-de" 1615303050 16470 42d42e2b8ceb769ab401eda9dba1a473 ""
+  "acquisition-of-de.aux" 1615303052 1928 f42707e92e6135a9aed9b8a11b62d962 "pdflatex"
   (generated)
   "acquisition-of-de.log"
-  "acquisition-of-de.aux"
   "acquisition-of-de.pdf"
+  "acquisition-of-de.aux"

@@ -106,6 +106,7 @@ older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to4
 print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 
+
 #CREATING PLOT(s)
 print("Now generating plots...")
 # development of items preceding de
