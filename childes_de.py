@@ -36,6 +36,7 @@ data = data.loc[data["succeeding_item_type"] != "chi"]
 data = data.loc[data["succeeding_item_type"] != "cl"]
 data.loc[data["succeeding_item"] == "是", "succeeding_item_type"] = "cop"
 data.loc[data["succeeding_item_type"] == "sfp", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "adVP", "succeeding_item_type"] = "adv"
 data.loc[data["succeeding_item_type"] == "co", "succeeding_item_type"] = "det"
 data.loc[data["succeeding_item_type"] == "co:iNP", "succeeding_item_type"] = "NA"
 data.loc[data["succeeding_item_type"] == "coNP", "succeeding_item_type"] = "NA"
@@ -81,44 +82,95 @@ data_36to48 = data_36to48[data_36to48.age <= 48]
 print(f"There are {len(data_36to48)} de utterances in the 36-48 month dataset.")
 
 # CREATE FREQUENCY DATASETS
-tong_head_count_data = pd.crosstab(index=tong_data["age"], columns=tong_data["succeeding_item_type"], normalize=True).reset_index()
-tong_spec_count_data = pd.crosstab(index=tong_data["age"], columns=tong_data["preceding_item_type"], normalize=True).reset_index()
+tong_head_count_data = pd.crosstab(index=tong_data["age"], columns=tong_data["succeeding_item_type"], normalize="index").reset_index()
+tong_spec_count_data = pd.crosstab(index=tong_data["age"], columns=tong_data["preceding_item_type"], normalize="index").reset_index()
 print(f"Created DF tong_head_count_data with {len(tong_head_count_data)} rows.")
 print(f"Created DF tong_spec_count_data with {len(tong_spec_count_data)} rows.")
-erbaugh_head_count_data = pd.crosstab(index=erbaugh_data["age"], columns=erbaugh_data["succeeding_item_type"], normalize=True).reset_index()
-erbaugh_spec_count_data = pd.crosstab(index=erbaugh_data["age"], columns=erbaugh_data["preceding_item_type"], normalize=True).reset_index()
+erbaugh_head_count_data = pd.crosstab(index=erbaugh_data["age"], columns=erbaugh_data["succeeding_item_type"], normalize="index").reset_index()
+erbaugh_spec_count_data = pd.crosstab(index=erbaugh_data["age"], columns=erbaugh_data["preceding_item_type"], normalize="index").reset_index()
 print(f"Created DF erbaugh_head_count_data with {len(erbaugh_head_count_data)} rows.")
 print(f"Created DF erbaugh_spec_count_data with {len(erbaugh_spec_count_data)} rows.")
-zhou3_head_count_data = pd.crosstab(index=zhou3_data["age"], columns=zhou3_data["succeeding_item_type"], normalize=True).reset_index()
-zhou3_spec_count_data = pd.crosstab(index=zhou3_data["age"], columns=zhou3_data["preceding_item_type"], normalize=True).reset_index()
+zhou3_head_count_data = pd.crosstab(index=zhou3_data["age"], columns=zhou3_data["succeeding_item_type"], normalize="index").reset_index()
+zhou3_spec_count_data = pd.crosstab(index=zhou3_data["age"], columns=zhou3_data["preceding_item_type"], normalize="index").reset_index()
 print(f"Created DF zhou3_head_count_data with {len(zhou3_head_count_data)} rows.")
 print(f"Created DF zhou3_spec_count_data with {len(zhou3_spec_count_data)} rows.")
-zhou1_head_count_data = pd.crosstab(index=zhou1_data["age"], columns=zhou1_data["succeeding_item_type"], normalize=True).reset_index()
-zhou1_spec_count_data = pd.crosstab(index=zhou1_data["age"], columns=zhou1_data["preceding_item_type"], normalize=True).reset_index()
+zhou1_head_count_data = pd.crosstab(index=zhou1_data["age"], columns=zhou1_data["succeeding_item_type"], normalize="index").reset_index()
+zhou1_spec_count_data = pd.crosstab(index=zhou1_data["age"], columns=zhou1_data["preceding_item_type"], normalize="index").reset_index()
 print(f"Created DF zhou1_head_count_data with {len(zhou1_head_count_data)} rows.")
 print(f"Created DF zhou1_head_count_data with {len(zhou1_head_count_data)} rows.")
-etz_head_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["succeeding_item_type"], normalize=True).reset_index()
-etz_spec_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["preceding_item_type"], normalize=True).reset_index()
+etz_head_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["succeeding_item_type"], normalize="index").reset_index()
+etz_spec_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["preceding_item_type"], normalize="index").reset_index()
 print(f"Created DF etz_head_count_data with {len(etz_head_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_head_count_data.age.min()} to {etz_head_count_data.age.max()} months.")
 print(f"Created DF etz_spec_count_data with {len(etz_spec_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_spec_count_data.age.min()} to {etz_spec_count_data.age.max()} months.")
-older_head_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["succeeding_item_type"], normalize=True).reset_index()
-older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["preceding_item_type"], normalize=True).reset_index()
+older_head_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["succeeding_item_type"], normalize="index").reset_index()
+older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["preceding_item_type"], normalize="index").reset_index()
 print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 
-
 #CREATING PLOT(s)
+import matplotlib.pyplot as plt
 print("Now generating plots...")
 # development of items preceding de
-fig, axes = plt.subplots(nrows=2, ncols=2)
-# Tong corpus heads
-tong_spec_count_data.plot.bar(stacked=True,ax=axes[0,0])
-plt.plot(x=age, y=tong_spec_count_data.NP)
-plt.scatter(x=age, y=tong_count_data.np_head, "^")
-plt.scatter(x=age, y=tong_count_data.vp_head, "s")
-plt.scatter(x=age, y=tong_count_data.sentence_final, "d")
-classes = ["Total de utterances", "NP heads", "VP heads", "Sentence-final de"]
+# in the Tong corpus
+tong_spec_count_data.plot.bar(x="age", stacked=True)
 plt.xlabel("Age in months")
-plt.ylabel("Number of utterances containing 'de'")
-plt.legend(labels=classes)
-plt.title("Usage of de in the Tong corpus")
+plt.ylabel("Proportion of Spec types in 'de' utterances")
+plt.title("Items preceding 'de' in the Tong corpus")
+plt.savefig("tong_preceding.png")
+# in the Erbaugh corpus
+erbaugh_spec_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Proportion of Spec types in 'de' utterances")
+plt.title("Items preceding 'de' in the Erbaugh corpus")
+plt.savefig("erbaugh_preceding.png")
+# in the Zhou 1 corpus
+zhou1_spec_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Proportion of Spec types in 'de' utterances")
+plt.title("Items preceding 'de' in the Zhou 1 corpus")
+plt.savefig("zhou1_preceding.png")
+# in the Zhou 3 corpus
+zhou3_spec_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Proportion of Spec types in 'de' utterances")
+plt.title("Items preceding 'de' in the Zhou 3 corpus")
+plt.savefig("zhou3_preceding.png")
+# in the ETZ combined corpora
+etz_spec_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Proportion of Spec types in 'de' utterances")
+plt.title("Items preceding 'de' in the Erbaugh, Tong, Zhou 3 corpora (combined)")
+plt.savefig("etz_preceding.png")
+# development of items succeeding de i.e. head types
+# in the Tong corpus
+tong_head_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Types of items following 'de'")
+plt.title("Items following 'de' in the Tong corpus")
+plt.savefig("tong_heads.png")
+# in the Erbaugh corpus
+erbaugh_head_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Types of items following 'de'")
+plt.title("Items following 'de' in the Erbaugh corpus")
+plt.savefig("erbaugh_heads.png")
+# in the Zhou 1 corpus
+zhou1_head_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Types of items following 'de'")
+plt.title("Items following 'de' in the Zhou 1 corpus")
+plt.savefig("zhou1_heads.png")
+# in the Zhou 3 corpus
+zhou3_head_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Types of items following 'de'")
+plt.title("Items following 'de' in the Zhou 3 corpus")
+plt.savefig("zhou3_heads.png")
+# in the ETZ combined corpora
+etz_head_count_data.plot.bar(x="age", stacked=True)
+plt.xlabel("Age in months")
+plt.ylabel("Types of items following 'de'")
+plt.title("Items following 'de' in the Erbaugh, Tong, Zhou 3 corpora (combined)")
+plt.savefig("etz_heads.png")
+
+# number of des produced over time
