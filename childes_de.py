@@ -230,13 +230,6 @@ older_count_data = create_df(older_count_data)
 older_count_data = older_count_data[older_count_data.total_de > 0]
 print(f"Created DF older_count_data with {len(older_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
 
-#CREATING PLOT(s)
-print("Now generating plots...")
-count_data.plot("age", ["sentence_final", "vp_head", "np_head"], kind="bar")
-plt.savefig("headtype_raw.png")
-count_data.plot("age", "total_de", kind="scatter")
-plt.savefig("total_de_raw.png")
-
 # create new DF where each column is represented as percentage of total de counts
 count_data_normed = count_data.copy()
 count_data_normed = count_data_normed.astype(float)
@@ -263,6 +256,16 @@ for row in data:
         unique_nouns = data.prec_vp[data.age == age].nunique()
         unique_nouns = data.prec_adj[data.age == age].nunique()
         print(f"Age: {age} months\n Number of unique nouns before de: {unique_nouns}")
+
+#CREATING PLOT(s)
+print("Now generating plots...")
+# comparing preceding item types by ages
+fig, axes = plt.subplots(nrows=2, ncols=2)
+plt.
+count_data.plot("age", ["sentence_final", "vp_head", "np_head"], kind="bar")
+plt.savefig("headtype_raw.png")
+count_data.plot("age", "total_de", kind="scatter")
+plt.savefig("total_de_raw.png")
 
 # MORE PLOTS
 # comparing preceding item types by ages
