@@ -67,168 +67,32 @@ data_36to48 = data_36to48[data_36to48.age <= 48]
 print(f"There are {len(data_36to48)} de utterances in the 36-48 month dataset.}")
 
 # CREATE FREQUENCY DATASETS
-ages = list(set(data["age"].tolist()))
-count_data = {
-    "age": [],
-    "total_de": [],
-    "np_head": [],
-    "vp_head": [],
-    "sentence_final": [],
-    "prec_adj": [],
-    "prec_np": [],
-    "prec_vp": []
-    }
-for age in ages:
-    target_data = data[(data["age"] == age)]
-    count_data["age"].append(age)
-    count_data["total_de"].append(len(target_data))
-    count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
-    count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
-    count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
-    count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
-    count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
-    count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
-count_data = create_df(count_data)
-count_data = count_data.sort_values(by="age")
-print(f"Created DF count_data with {len(count_data)} rows.")
-tong_count_data = {
-    "age": [],
-    "total_de": [],
-    "np_head": [],
-    "vp_head": [],
-    "sentence_final": [],
-    "prec_adj": [],
-    "prec_np": [],
-    "prec_vp": []
-    }
-for age in ages:
-    target_data = tong_data[(tong_data["age"] == age)]
-    tong_count_data["age"].append(age)
-    tong_count_data["total_de"].append(len(target_data))
-    tong_count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
-    tong_count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
-    tong_count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
-    tong_count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
-    tong_count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
-    tong_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
-tong_count_data = create_df(tong_count_data)
-tong_count_data = tong_count_data[tong_count_data.age <= 40]
-tong_count_data = tong_count_data[tong_count_data.total_de > 0]
-print(f"Created DF tong_count_data with {len(tong_count_data)} rows.")
-erbaugh_count_data = {
-    "age": [],
-    "total_de": [],
-    "np_head": [],
-    "vp_head": [],
-    "sentence_final": [],
-    "prec_adj": [],
-    "prec_np": [],
-    "prec_vp": []
-    }
-for age in ages:
-    target_data = erbaugh_data[(erbaugh_data["age"] == age)]
-    erbaugh_count_data["age"].append(age)
-    erbaugh_count_data["total_de"].append(len(target_data))
-    erbaugh_count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
-    erbaugh_count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
-    erbaugh_count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
-    erbaugh_count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
-    erbaugh_count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
-    erbaugh_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
-erbaugh_count_data = create_df(erbaugh_count_data)
-erbaugh_count_data = erbaugh_count_data[erbaugh_count_data.total_de > 0]
-print(f"Created DF erbaugh_count_data with {len(erbaugh_count_data)} rows.")
-zhou3_count_data = {
-    "age": [],
-    "total_de": [],
-    "np_head": [],
-    "vp_head": [],
-    "sentence_final": [],
-    "prec_adj": [],
-    "prec_np": [],
-    "prec_vp": []
-    }
-for age in ages:
-    target_data = zhou3_data[(zhou3_data["age"] == age)]
-    zhou3_count_data["age"].append(age)
-    zhou3_count_data["total_de"].append(len(target_data))
-    zhou3_count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
-    zhou3_count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
-    zhou3_count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
-    zhou3_count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
-    zhou3_count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
-    zhou3_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
-zhou3_count_data = create_df(zhou3_count_data)
-zhou3_count_data = zhou3_count_data[zhou3_count_data.total_de > 0]
-zhou1_count_data = {
-    "age": [],
-    "total_de": [],
-    "np_head": [],
-    "vp_head": [],
-    "sentence_final": [],
-    "prec_adj": [],
-    "prec_np": [],
-    "prec_vp": []
-    }
-for age in ages:
-    target_data = zhou1_data[(zhou1_data["age"] == age)]
-    zhou1_count_data["age"].append(age)
-    zhou1_count_data["total_de"].append(len(target_data))
-    zhou1_count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
-    zhou1_count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
-    zhou1_count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
-    zhou1_count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
-    zhou1_count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
-    zhou1_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
-zhou1_count_data = create_df(zhou1_count_data)
-zhou1_count_data = zhou1_count_data[zhou3_count_data.total_de > 0]
-print(f"Created DF zhou1_count_data with {len(zhou1_count_data)} rows.")
-etz_count_data = {
-    "age": [],
-    "total_de": [],
-    "np_head": [],
-    "vp_head": [],
-    "sentence_final": [],
-    "prec_adj": [],
-    "prec_np": [],
-    "prec_vp": []
-    }
-for age in ages:
-    target_data = data_24to30[(data_24to30["age"] == age)]
-    etz_count_data["age"].append(age)
-    etz_count_data["total_de"].append(len(target_data))
-    etz_count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
-    etz_count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
-    etz_count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
-    etz_count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
-    etz_count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
-    etz_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
-etz_count_data = create_df(etz_count_data)
-etz_count_data = etz_count_data[etz_count_data.total_de > 0]
-print(f"Created DF etz_count_data with {len(etz_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_count_data.age.min()} to {etz_count_data.age.max()} months.")
-older_count_data = {
-    "age": [],
-    "total_de": [],
-    "np_head": [],
-    "vp_head": [],
-    "sentence_final": [],
-    "prec_adj": [],
-    "prec_np": [],
-    "prec_vp": []
-    }
-for age in ages:
-    target_data = data_36to48[(data_36to48["age"] == age)]
-    older_count_data["age"].append(age)
-    older_count_data["total_de"].append(len(target_data))
-    older_count_data["np_head"].append(len(target_data[(target_data["succeeding_item_type"] == "NP")]))
-    older_count_data["vp_head"].append(len(target_data[(target_data["succeeding_item_type"] == "VP")]))
-    older_count_data["sentence_final"].append(len(target_data[(target_data["succeeding_item_type"] == "NA")]))
-    older_count_data["prec_adj"].append(len(target_data[(target_data["preceding_item_type"] == "adj")]))
-    older_count_data["prec_np"].append(len(target_data[(target_data["preceding_item_type"] == "NP")]))
-    older_count_data["prec_vp"].append(len(target_data[(target_data["preceding_item_type"] == "VP")]))
-older_count_data = create_df(older_count_data)
-older_count_data = older_count_data[older_count_data.total_de > 0]
-print(f"Created DF older_count_data with {len(older_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
+count_data = pd.DataFrame(columns=["age", "total_de", [data.succeeding_item_type.tolist()], [data.preceding_item_type.tolist()]])
+
+tong_head_count_data = pd.crosstab(index=tong_data["age"], columns=tong_data["succeeding_item_type"], normalize=True)
+tong_spec_count_data = pd.crosstab(index=tong_data["age"], columns=tong_data["preceding_item_type"], normalize=True)
+print(f"Created DF tong_head_count_data with {len(tong_head_count_data)} rows.")
+print(f"Created DF tong_spec_count_data with {len(tong_spec_count_data)} rows.")
+erbaugh_head_count_data = pd.crosstab(index=erbaugh_data["age"], columns=erbaugh_data["succeeding_item_type"], normalize=True)
+erbaugh_spec_count_data = pd.crosstab(index=erbaugh_data["age"], columns=erbaugh_data["preceding_item_type"], normalize=True)
+print(f"Created DF erbaugh_head_count_data with {len(erbaugh_head_count_data)} rows.")
+print(f"Created DF erbaugh_spec_count_data with {len(erbaugh_spec_count_data)} rows.")
+zhou3_head_count_data = pd.crosstab(index=zhou3_data["age"], columns=zhou3_data["succeeding_item_type"], normalize=True)
+zhou3_spec_count_data = pd.crosstab(index=zhou3_data["age"], columns=zhou3_data["preceding_item_type"], normalize=True)
+print(f"Created DF zhou3_head_count_data with {len(zhou3_head_count_data)} rows.")
+print(f"Created DF zhou3_spec_count_data with {len(zhou3_spec_count_data)} rows.")
+zhou1_head_count_data = pd.crosstab(index=zhou1_data["age"], columns=zhou1_data["succeeding_item_type"], normalize=True)
+zhou1_spec_count_data = pd.crosstab(index=zhou1_data["age"], columns=zhou1_data["preceding_item_type"], normalize=True)
+print(f"Created DF zhou1_head_count_data with {len(zhou1_head_count_data)} rows.")
+print(f"Created DF zhou1_head_count_data with {len(zhou1_head_count_data)} rows.")
+etz_head_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["succeeding_item_type"], normalize=True)
+etz_spec_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["preceding_item_type"], normalize=True)
+print(f"Created DF etz_head_count_data with {len(etz_head_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_count_data.age.min()} to {etz_count_data.age.max()} months.")
+print(f"Created DF etz_spec_count_data with {len(etz_spec_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_count_data.age.min()} to {etz_count_data.age.max()} months.")
+older_head_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["succeeding_item_type"], normalize=True)
+older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["preceding_item_type"], normalize=True)
+print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
+print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
 
 # create new DF where each column is represented as percentage of total de counts
 count_data_normed = count_data.copy()
