@@ -94,33 +94,6 @@ older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to4
 print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
 print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
 
-# create new DF where each column is represented as percentage of total de counts
-count_data_normed = count_data.copy()
-count_data_normed = count_data_normed.astype(float)
-def get_percentages(dataframe, numerator, denominator):
-    """Returns a new dataframe where values in one column (the numerator) is expressed as a percentage of values in another column (the denominator). The numerator can also be a list of column names."""
-    df_normed = dataframe.copy()
-    df_normed = df_normed.astype(float)
-    for i in range(len(df_normed)):
-        total_count = int(df_normed.at[i, denominator])
-        for column in numerator:
-            df_normed.at[i, column] = ((int(df_normed.at[i, column]) / total_count)*100)
-    return df_normed
-for i in range(len(count_data_normed)):
-    total_count = int(count_data_normed.at[i, "total_de"])
-    count_data_normed.at[i, "np_head"] = ((int(count_data_normed.at[i, "np_head"]) / total_count)*100)
-    count_data_normed.at[i, "vp_head"] = ((int(count_data_normed.at[i, "vp_head"]) / total_count)*100)
-    count_data_normed.at[i, "sentence_final"] = ((int(count_data_normed.at[i, "sentence_final"]) / total_count)*100)
-    count_data_normed.at[i, "prec_adj"] = ((int(count_data_normed.at[i, "prec_adj"]) / total_count)*100)
-    count_data_normed.at[i, "prec_np"] = ((int(count_data_normed.at[i, "prec_np"]) / total_count)*100)
-    count_data_normed.at[i, "prec_vp"] = ((int(count_data_normed.at[i, "prec_vp"]) / total_count)*100)
-for row in data:
-    for age in ages:
-        unique_nouns = data.prec_np[data.age == age].nunique()
-        unique_nouns = data.prec_vp[data.age == age].nunique()
-        unique_nouns = data.prec_adj[data.age == age].nunique()
-        print(f"Age: {age} months\n Number of unique nouns before de: {unique_nouns}")
-
 #CREATING PLOT(s)
 print("Now generating plots...")
 # comparing preceding item types by ages
