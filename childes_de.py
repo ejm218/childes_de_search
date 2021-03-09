@@ -41,6 +41,20 @@ data.loc[data["succeeding_item_type"] == "co:iNP", "succeeding_item_type"] = "NA
 data.loc[data["succeeding_item_type"] == "coNP", "succeeding_item_type"] = "NA"
 data.loc[data["succeeding_item_type"] == "asp", "succeeding_item_type"] = "NA"
 data.loc[data["succeeding_item_type"] == "quaNP", "succeeding_item_type"] = "adj"
+data.loc[data["preceding_item"] == "是", "preceding_item_type"] = "cop"
+data.loc[data["preceding_item_type"] == "sfp", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "co", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "co:iNP", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "coNP", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "asp", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "quaNP", "preceding_item_type"] = "adj"
+data.loc[data["preceding_item_type"] == "L2", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "poss", "preceding_item_type"] = "adj"
+data.loc[data["preceding_item_type"] == "", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "cl", "preceding_item_type"] = "adj"
+data.loc[data["preceding_item_type"] == "cleft", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "oNP", "preceding_item_type"] = "other"
+
 print(f"The full dataset contains {len(data)} utterances between {data.age.min()} and {data.age.max()} months.")
 #modifier_types = data["preceding_item_type"].value_counts()
 #print(type(modifier_types))
@@ -92,83 +106,18 @@ older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to4
 print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 
-
 #CREATING PLOT(s)
 print("Now generating plots...")
-# comparing preceding item types by age
+# development of items preceding de
 fig, axes = plt.subplots(nrows=2, ncols=2)
-plt.scatter()
-count_data.plot("age", ["sentence_final", "vp_head", "np_head"], kind="bar")
-plt.savefig("headtype_raw.png")
-count_data.plot("age", "total_de", kind="scatter")
-plt.savefig("total_de_raw.png")
-
-# MORE PLOTS
-# comparing preceding item types by ages
-count_data_normed.plot("age", ["prec_adj", "prec_np", "prec_vp"], kind="bar")
-plt.xlabel("Age in months")
-plt.ylabel("Proportion of ADJ, NP, and VP preceding DE")
-plt.savefig("preceding_items.png")
-# comparing head types by age
-count_data_normed.plot("age", ["np_head", "vp_head"], kind="bar")
-plt.xlabel("Age in months")
-plt.ylabel("Proportion of NP and VP heads")
-plt.savefig("preceding_items.png")
-# scatter plot of VP heads over time
-count_data_normed.plot("age", "vp_head", kind="scatter")
-plt.xlabel("Age in months")
-plt.ylabel("Proportion VP heads")
-plt.savefig("vp_head_vs_age.png")
-
-# comparing preceding item types by ages
-fig, axes = plt.subplots(nrows=2, ncols=2)
-tong_spec_count_data.plot(ax=axes[0,0])
-plt.scatter(x=tong_spec_count_data.age, y=tong_spec_count_data.total_de)
-plt.scatter(x=tong_count_data.age, y=tong_count_data.np_head, "^")
-plt.scatter(x=tong_count_data.age, y=tong_count_data.vp_head, "s")
-plt.scatter(x=tong_count_data.age, y=tong_count_data.sentence_final, "d")
+# Tong corpus heads
+tong_spec_count_data.plot.bar(stacked=True,ax=axes[0,0])
+plt.plot(x=age, y=tong_spec_count_data.NP)
+plt.scatter(x=age, y=tong_count_data.np_head, "^")
+plt.scatter(x=age, y=tong_count_data.vp_head, "s")
+plt.scatter(x=age, y=tong_count_data.sentence_final, "d")
 classes = ["Total de utterances", "NP heads", "VP heads", "Sentence-final de"]
 plt.xlabel("Age in months")
 plt.ylabel("Number of utterances containing 'de'")
 plt.legend(labels=classes)
 plt.title("Usage of de in the Tong corpus")
-zhou3_count_data.plot(ax=axes[0,1])
-plt.scatter(x=zhou3_count_data.age, y=zhou3_count_data.total_de)
-plt.scatter(x=zhou3_count_data.age, y=zhou3_count_data.np_head, "^")
-plt.scatter(x=zhou3_count_data.age, y=zhou3_count_data.vp_head, "s")
-plt.scatter(x=zhou3_count_data.age, y=zhou3_count_data.sentence_final, "d")
-classes = ["Total de utterances", "NP heads", "VP heads", "Sentence-final de"]
-plt.xlabel("Age in months")
-plt.ylabel("Number of utterances containing 'de'")
-plt.legend(labels=classes)
-plt.title("Usage of de in the Zhou 3 corpus")
-erbaugh_count_data.plot(ax=axes[1,0])
-plt.scatter(x=erbaugh_count_data.age, y=erbaugh_count_data.total_de)
-plt.scatter(x=erbaugh_count_data.age, y=erbaugh_count_data.np_head, "^")
-plt.scatter(x=erbaugh_count_data.age, y=erbaugh_count_data.vp_head, "s")
-plt.scatter(x=erbaugh_count_data.age, y=erbaugh_count_data.sentence_final, "d")
-classes = ["Total de utterances", "NP heads", "VP heads", "Sentence-final de"]
-plt.xlabel("Age in months")
-plt.ylabel("Number of utterances containing 'de'")
-plt.legend(labels=classes)
-plt.title("Usage of de in the Erbaugh corpus")
-etz_count_data.plot(ax=axes[1,1])
-plt.scatter(x=etz_count_data.age, y=etz_count_data.total_de)
-plt.scatter(x=etz_count_data.age, y=etz_count_data.np_head, "^")
-plt.scatter(x=etz_count_data.age, y=etz_count_data.vp_head, "s")
-plt.scatter(x=etz_count_data.age, y=etz_count_data.sentence_final, "d")
-classes = ["Total de utterances", "NP heads", "VP heads", "Sentence-final de"]
-plt.xlabel("Age in months")
-plt.ylabel("Number of utterances containing 'de'")
-plt.legend(labels=classes)
-plt.title("Usage of de in the three combined corpora")
-plt.savefig("de_dev_early.png")
-
-# CALCULATE REGRESSION LINE AKA LINE OF BEST FIT
-from statistics import mean
-def get_regression_line(x ,y ):
-    m = (((mean(x)*mean(y)) - mean(x*y)) /
-         ((mean(x)*mean(x)) - mean(x*x)))
-    b = mean(y) - m*mean(x)
-    regression_line = [(m*value)+b for value in x]
-    return regression_line
