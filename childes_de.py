@@ -51,20 +51,20 @@ print(f"The full dataset contains {len(data)} utterances between {data.age.min()
 
 # SUBSETS
 tong_data = data[data.filename.str.contains("Tong.*")==True]
-print(f"There are {len(tong_data)} de utterances in the Tong dataset.}")
+print(f"There are {len(tong_data)} de utterances in the Tong dataset.")
 erbaugh_data = data[data.filename.str.contains("Erbaugh.*")==True]
-print(f"There are {len(erbaugh_data)} de utterances in the Erbaugh dataset.}")
+print(f"There are {len(erbaugh_data)} de utterances in the Erbaugh dataset.")
 zhou1_data = data[data.filename.str.contains("Zhou1.*")==True]
-print(f"There are {len(zhou1_data)} de utterances in the Zhou 1 dataset.}")
+print(f"There are {len(zhou1_data)} de utterances in the Zhou 1 dataset.")
 zhou3_data = data[data.filename.str.contains("Zhou3.*")==True]
-print(f"There are {len(zhou3_data)} de utterances in the Zhou 3 dataset.}")
+print(f"There are {len(zhou3_data)} de utterances in the Zhou 3 dataset.")
 data_24to30 = pd.concat([tong_data, erbaugh_data, zhou3_data])
 data_24to30 = data_24to30[data_24to30.age >= 24]
 data_24to30 = data_24to30[data_24to30.age <= 30]
-print(f"There are {len(data_24to30)} de utterances in the 24-30 month dataset.}")
+print(f"There are {len(data_24to30)} de utterances in the 24-30 month dataset.")
 data_36to48 = data[data.age >= 36]
 data_36to48 = data_36to48[data_36to48.age <= 48]
-print(f"There are {len(data_36to48)} de utterances in the 36-48 month dataset.}")
+print(f"There are {len(data_36to48)} de utterances in the 36-48 month dataset.")
 
 # CREATE FREQUENCY DATASETS
 count_data = pd.DataFrame(columns=["age", "total_de", [data.succeeding_item_type.tolist()], [data.preceding_item_type.tolist()]])
@@ -87,12 +87,13 @@ print(f"Created DF zhou1_head_count_data with {len(zhou1_head_count_data)} rows.
 print(f"Created DF zhou1_head_count_data with {len(zhou1_head_count_data)} rows.")
 etz_head_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["succeeding_item_type"], normalize=True)
 etz_spec_count_data = pd.crosstab(index=data_24to30["age"], columns=data_24to30["preceding_item_type"], normalize=True)
-print(f"Created DF etz_head_count_data with {len(etz_head_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_count_data.age.min()} to {etz_count_data.age.max()} months.")
-print(f"Created DF etz_spec_count_data with {len(etz_spec_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_count_data.age.min()} to {etz_count_data.age.max()} months.")
+print(f"Created DF etz_head_count_data with {len(etz_head_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_head_count_data.age.min()} to {etz_head_count_data.age.max()} months.")
+print(f"Created DF etz_spec_count_data with {len(etz_spec_count_data)} rows. This is a combination of the Erbaugh, Tong, and Zhou3 dataframes, comprising data from {etz_spec_count_data.age.min()} to {etz_spec_count_data.age.max()} months.")
 older_head_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["succeeding_item_type"], normalize=True)
 older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["preceding_item_type"], normalize=True)
-print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
-print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora, with data from {older_count_data.age.min()} to {older_count_data.age.max()} months.")
+print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
+print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
+
 
 #CREATING PLOT(s)
 print("Now generating plots...")
