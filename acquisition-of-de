@@ -243,11 +243,34 @@ At twenty-one months, several more children have begun to use \textit{de} in spo
   \end{CJK}
 \end{examples}
 
-Again, approximately half of the 39 utterances containing \textit{de} have it in sentence-final position.
+Again, approximately half of the 39 utterances containing \textit{de} have it in sentence-final position. At this point, only the possessive construction
 
-Around their second birthday, we see a considerable decrease in the proportion of sentence-final \textit{de}s for the children in the Tong and Erbaugh corpora, and an increase in their use in the Zhou 3 corpus. The proportion of sentence-final utterances also decreases between the 14, 20, and 21-month-old groups in the Zhou 1 dataset.  
+Around their second birthday, we see a considerable decrease in the proportion of sentence-final \textit{de}s for the children in the Tong and Erbaugh corpora, and an increase in their use in the Zhou 3 corpus. The proportion of sentence-final utterances also decreases between the 14, 20, and 21-month-old groups in the Zhou 1 dataset.
 
 \section{Discussion}
+\subsection{Theoretical Implications}
+
+\subsection{Limitations}
+While this data provides us with a robust starting point for future discussions of children's use of \textit{de} in Mandarin, there are a few shortcomings that should be noted when interpreting the data presented here. Firstly, the accuracy of the numbers presented here relies on that of the transcribers, as well as the consistency of transcriptions across corpora. Many words in Mandarin, while canonically belonging to one syntactic category, can be used as a different category without any form of morphological marking to indicate that its part of speech has changed. For instance, depending on the persuasion of the transcriber, \textit{shuijiao} in () could be tagged as either a noun or a verb. Similarly, some adjectives (especially those denoting color) can be used as a noun. It is worth noting that the first uses of adjectival \textit{de} contain a color word. In these instances, it is plausible that the child has identified the color as noun and is using \textit{de} to link two NPs, rather than an adjective and an NP. 
+
+\begin{examples}
+  \begin{CJK}{UTF8}{gbsn}
+    \item\label{vp-ambiguity}
+      \glll 睡觉 很 重要
+       shuijiao hen zhongyao
+       sleep very important
+       \glt "Sleep is very important" / "To sleep is very important"
+       \glend
+     \item\label{adj-ambiguity}
+       \glll 中国人 很 爱 红色
+        zhongguoren hen ai hongse
+        Chinese-people very love red
+        \glt "Chinese people love (the color) red"
+        \glend
+  \end{CJK}
+\end{examples}
+
+Secondly, it is difficult to write a program which will be able to correctly identify instances of subject relative clauses due to the way MOR tagging is done in CHILDES. MOR does not segment utterances into phrasal categories, but rather indicates the part of speech for each morpheme or lexical item in the utterance. Thus, a verb phrase would be represented as a case of
 
 \section{Appendix} \label{code}
 
