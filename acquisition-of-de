@@ -251,7 +251,7 @@ Around their second birthday, we see a considerable decrease in the proportion o
 \subsection{Theoretical Implications}
 
 \subsection{Limitations}
-While this data provides us with a robust starting point for future discussions of children's use of \textit{de} in Mandarin, there are a few shortcomings that should be noted when interpreting the data presented here. Firstly, the accuracy of the numbers presented here relies on that of the transcribers, as well as the consistency of transcriptions across corpora. Many words in Mandarin, while canonically belonging to one syntactic category, can be used as a different category without any form of morphological marking to indicate that its part of speech has changed. For instance, depending on the persuasion of the transcriber, \textit{shuijiao} in () could be tagged as either a noun or a verb. Similarly, some adjectives (especially those denoting color) can be used as a noun. It is worth noting that the first uses of adjectival \textit{de} contain a color word. In these instances, it is plausible that the child has identified the color as noun and is using \textit{de} to link two NPs, rather than an adjective and an NP. 
+While this data provides us with a robust starting point for future discussions of children's use of \textit{de} in Mandarin, there are a few shortcomings that should be noted when interpreting the data presented here. Firstly, the accuracy of the numbers presented here relies on that of the transcribers, as well as the consistency of transcriptions across corpora. Many words in Mandarin, while canonically belonging to one syntactic category, can be used as a different category without any form of morphological marking to indicate that its part of speech has changed. For instance, depending on the persuasion of the transcriber, \textit{shuijiao} in (\ref{vp-ambiguity}) could be tagged as either a noun or a verb. Similarly, some adjectives (especially those denoting color) can be used as a noun (e.g. in (\ref{adj-ambiguity})). It is worth noting that the first uses of adjectival \textit{de} contain a color word. In these instances, it is plausible that the child has identified the color as noun and is using \textit{de} to link two NPs, rather than an adjective and an NP.
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
@@ -270,7 +270,26 @@ While this data provides us with a robust starting point for future discussions 
   \end{CJK}
 \end{examples}
 
-Secondly, it is difficult to write a program which will be able to correctly identify instances of subject relative clauses due to the way MOR tagging is done in CHILDES. MOR does not segment utterances into phrasal categories, but rather indicates the part of speech for each morpheme or lexical item in the utterance. Thus, a verb phrase would be represented as a case of
+Secondly, it is difficult to write a program which will be able to correctly identify instances of subject relative clauses due to the way MOR tagging is done in CHILDES. MOR does not segment utterances into phrasal categories, but rather indicates the part of speech for each morpheme or lexical item in the utterance. Both subject and object relatives are possible using the \textit{de} construction in Mandarin; however, using the original code, only object relative NPs such as (\ref{rc-example}) would be detected, whereas subject relatives like (\ref{subj-rel}) would be incorrectly coded as an NP modifying an NP. Especially given the cross-linguistic evidence that children produce subject relatives before object relatives, it is likely that a number of subject relative clauses were falsely categorized as NP-\textit{de}-NP structures in this analysis.
+
+\begin{examples}
+  \begin{CJK}{UTF8}{gbsn}
+    \item\label{subj-rel}
+      \glll 昨天 买 车 的 女士
+       zuotian mai che de nüshi
+       yesterday buy car DE woman
+       \glt "The woman who bought a car yesterday"
+       \glend
+     \item\label{v-n-de}
+       \glll 我 吃 妈妈 的 糖果
+        wo chi mama de tangguo
+        1sg eat mommy DE candy
+        \glt "I am eating Mommy's candy"
+        \glend
+  \end{CJK}
+\end{examples}
+
+Unfortunately, there is no straightforward way to automate this analysis without miscategorizing some utterances. If we were to modify the code to designate all verb-noun-\textit{de} patterns as VP specifiers, then it might falsely categorize utterances like (\ref{v-n-de}), in which case the verb is not a part of the \textit{de} phrase. Future investigations into the production of \textit{de} would do well to consider these issues when collecting and coding the child speech data. 
 
 \section{Appendix} \label{code}
 
