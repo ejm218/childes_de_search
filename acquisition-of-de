@@ -12,7 +12,7 @@
 \begin{document}
 \section{Introduction}
 \subsection{Functions of \textit{de}}
-Both the semantic and syntactic characteristics of \textit{de} have been a source of contention in the literature for well over forty years now. One reason for this disgruntlement may be that \textit{de} wears many hats in Modern Mandarin and can combine with a large number of syntactic objects. When the target of modification is a noun phrase (NP), for instance, \textit{de} may appear adjacent to an adjectival phrase (\ref{adj-example}), a possessive phrase (\ref{poss-example}), a prepositional phrase (PP) (\ref{pp-example}), or an inflectional phrase (i.e. as a complementizer) (\ref{rc-example}).
+Both the semantic and syntactic characteristics of \textit{de} have been a source of contention in the literature for well over forty years now. One reason for this disgruntlement may be that \textit{de} wears many hats in Modern Mandarin and can combine with a large number of syntactic objects to modify a nominal phrase. When the target of modification is a noun phrase (NP), for instance, \textit{de} may appear adjacent to an adjectival phrase (\ref{adj-example}), a possessive phrase (\ref{poss-example}), a prepositional phrase (PP) (\ref{pp-example}), or an inflectional phrase (i.e. as a complementizer) (\ref{rc-example}).
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
@@ -49,7 +49,7 @@ Both the semantic and syntactic characteristics of \textit{de} have been a sourc
   \end{CJK}
 \end{examples}
 
-Furthermore, there is a phonetically identical element that allows modification of verb phrases, but is distinguished orthographically. Examples (\ref{vp-example1}) and (\ref{vp-example2}) illustrate this use.
+Furthermore, there is a phonetically identical element that allows modification of verb phrases, but is distinguished orthographically. Examples (\ref{vp-example1}) and (\ref{vp-example2}) illustrate this use. Whether these should be considered distinct morphemes or additional instantiations of the nominal modifier \textit{de} is outside the scope of this paper.
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
@@ -84,49 +84,46 @@ Further complicating the data is the fact that the absence or presence of \texti
         wood (DE) table
         \glt "a wooden table" (example from Paul (2010))
         \glend
+    \item\label{null-obj}
+        \glll 红色 的 给 我 吧
+         hongse de gei wo ba
+         red DE give 1sg IMP
+         \glt "Give me the red one"
+         \glend
   \end{CJK}
 \end{examples}
 
 Thus, while it is mandatory in most nominal modification structures, any theoretical account of \textit{de} must also account for the option to omit it given the right circumstances.
 
-\subsection{Theoretical Accounts}
+\subsection{Theoretical accounts}
 Given its vast range of applications within a sentence, a number of questions remain as to the exact characterization of \textit{de} in Mandarin. Could it be, as proposed by Li and Thompson (1981), that there are several different \textit{de}s in Mandarin, each one roughly corresponding to one of the above examples? Or are there only two types of \textit{de}, a head-initial and a head-final complementizer, as put forth by Cheng (1986)? Many early analyses of \textit{de} appear to focus solely on a subset of its possible uses in Mandarin. For example, Li (1985) argues that \textit{de} is a case marker similar to English genitive \textit{-s}, an analysis which does not particularly suit its application in adjectives and relative clauses (which she points out in the same paper). These early attempts to characterize \textit{de} left Sinologists and East Asian linguists largely dissatisfied.
 
 More recently, den Dikken and Singhepreecha (2004) proposed a unified 'linker' analysis, whereby \textit{de} is used to generate complex NPs by embedding a predicate inside the NP, and can therefore be combined with any predicative object in order to modify a nominal phrase. The underlying structure, they argue, is a traditional subject-predicate order, whereby the modifying XP originates in the predicative position of an utterance with the NP as its subject, and is subsequently raised to SpecNP and linked to the head noun via insertion of \textit{de}. Paul (2010) refutes this, however, on the basis that this interpretation incorrectly predicts that certain XPs can precede \textit{de} to modify a NP. Furthermore, he highlights several possible NP modification structures in Mandarin that should not exist, were this analysis correct. He does not, however, propose an alternative. Thus, the debate as to \textit{de}'s true nature rages on.
 
-\section{Acquisition of de}
+\section{Acquisition of \textit{de}}
 \subsection{Past findings}
 Despite its widespread use in the adult grammar and ongoing debate as to its typological characteristics, nobody to date has examined the development of \textit{de} in the grammar of Mandarin-speaking children. Like many linguistic phenomena, acquisition data may provide us with deep insight into the role that this particle plays in the grammar.
 
 The acquisition path for \textit{de} is also interesting for a number of theoretical reasons. Other morphemes with similar functions cross-linguistically, such as the Saxon genitive (\textit{-s}) in English, are acquired only after three years of age (citation Radford and Galasso, 1998), similar to embedded relative clauses (cf. Berman 1997; Crain, McKee and Emiliani, 1990; others). However, both of these structures in Mandarin are marked using the \textit{de} morpheme, along with a number of other modifications which are represented using distinct morphosyntax in many Indoeuropean langugages; perhaps the wider applicability of \textit{de} relative to structures with similar semantic purposes would shorten the acquisition timeline. If this is the case, it would raise questions regarding the role of both function and frequency on the acquisition of specific morphemes.
 
 \subsection{This study}
-\begin{example}
-  \begin{CJK}{UTF8}{gbsn}
-    \glll 红色 的 给 我 吧
-     hongse de gei wo ba
-     red DE give 1sg IMP
-     \glt "Give me the red one"
-     \glend
-     \label{null-subj}
-  \end{CJK}
-\end{example}
-The present study endeavors to answer several questions regarding the normal acquisition of the \textit{de} morpheme in Mandarin Chinese. Most importantly, we hope to determine at what point productive use of \textit{de} emerges, and in what contexts it appears in early child speech. With regard to the syntactic and semantic context, a few qualitative characteristics present themselves for further inspection, namely:
+The present study endeavors to answer several questions regarding the normal acquisition of the \textit{de} morpheme in Mandarin Chinese. Most importantly, we hope to determine at what point productive use of \textit{de} emerges, and in what context(s) it appears in early child speech. With regard to the syntactic and semantic context, a few qualitative characteristics present themselves for further inspection, namely:
 
 \begin{enumerate}
   \item[Preceding item] What types of items immediately precede \textit{de} in child speech? As demonstrated in the previous sections, \textit{de} can occur adjacent to a number of syntactic objects, including both nominals and predicates. If these different combinatorial possibilities represent distinct syntactic structures in the adult grammar, it is possible that the child learner would acquire each one at a different rate. On the other hand, if all of the possible uses of \textit{de} can be subsumed under a single notion of 'linking element,' e.g. as proposed by den Dikken and Singhepreecha, then we would expect to see all of the possible combinations emerge at the same time.
-  \item[Head type] Canonically, \textit{de} is used for complex nominals such as (\ref{adj-example}), (\ref{poss-example}), and (\ref{rc-example}). However, it can also appear in a sentence-final position in contexts like (\ref{prop-example}), where it combines with copular \textit{shi} to emphasize the preceding tense phrase. Furthermore, due to Mandarin's status as a radical pro-drop or 'topic-drop' language, both subject and object nominal phrases modified by \textit{de} can be omitted if the referent is previously established in the discourse, e.g. (\ref{null-subj}). In these cases, it would appear that the 'head' modified by \textit{de} is a predicate such as a VP or an adjective, when in fact it is an unpronounced NP.
+  \item[Head type] Canonically, \textit{de} is used for complex nominals such as (\ref{adj-example}), (\ref{poss-example}), and (\ref{rc-example}). However, it can also appear in a sentence-final position in contexts like (\ref{prop-example}), where it combines with copular \textit{shi} to emphasize the preceding tense phrase. Furthermore, due to Mandarin's status as a radical pro-drop or 'topic-drop' language, both subject and object nominal phrases modified by \textit{de} can be omitted if the referent is previously established in the discourse, e.g. (\ref{null-obj}). In these cases, it would appear that the 'head' modified by \textit{de} is a predicate such as a VP or an adjective, when in fact it is an unpronounced NP.
 \end{enumerate}
 
 To that end, an analysis of several corpora was conducted in order to determine roughly when and how \textit{de} develops in the grammar of Mandarin-speaking children.
 
 \section{Method}
+\subsection{Corpora used}
 A corpus search was conducted using corpora available via the CHILDES databank (MacWhinney, 2000). A complete list of the corpora used, along with their basic attributes, can be seen in Table (\ref{tab:corpora-summary}). Corpora were included if the youngest age in the dataset was no greater than three years (36 months) old, providing a total of six different datasets to be considered in this analysis. Although a number of the corpora included older children, the maximum age included in this search was 48 months.
 
 \begin{table}[h!]
   \begin{center}
     \begin{tabular}{l|l|l|l|l} % <-- Alignments
-      \textbf{Corpus name} & \textbf{Author} & \textbf{Age range (mo)} & \textbf{Type} & \textbf{Collection frequency}\\
+      \textbf{Corpus name} & \textbf{Author(s)} & \textbf{Age range (mo)} & \textbf{Type} & \textbf{Collection frequency}\\
       \hline
       Erbaugh & Mary Erbaugh and Linhui Li & 24-45 & Longitudinal & Monthly \\
       Tong & Xiangjun Deng and Virginia Yip & 19-40 & Longitudinal & Monthly \\
@@ -162,7 +159,7 @@ Finally, an additional dataset was created containing utterances from children b
 \subsection{Data omissions}
 Several types of MOR (part of speech) tags appeared in the initial search for items immediately following \textit{de} that were either incorrectly coded, overlapped with existing tags, or otherwise warranted removal from the dataset. Some results were also collapsed into single categories for ease of analysis, for instance, all verbs with the exception of \textit{shi} were tagged as VP (\textit{shi} was tagged as a copular verb). When \textit{de} was followed by an item tagged as a 'sentence-final particle (SFP),' the utterance was assigned to the 'sentence final' category. Likewise, if \textit{de} was followed by the aspectual marker \textit{le} or a conjunction such as \textit{yinwei} 'because', the utterance was tagged as sentence-final. An 'other' tag was created for infrequent values that occurred only a handful of times in the data. This included items tagged as 'possessive', 'chi', and 'classifier,' among a few others.
 
-\section{Results}
+\section{Results} % <---------------------------- RESULTS BEGIN HERE ----------------------------------------------------------------------------------
 
 \subsection{Earliest uses}
 \begin{example}
@@ -179,7 +176,7 @@ Several types of MOR (part of speech) tags appeared in the initial search for it
 
 The youngest age at which \textit{de} was used by a child was fourteen months old (see (\ref{14mo-example})); however, this was limited to a single utterance in the Zhou 1 corpus (citation). \textit{De} did not appear again in the same corpus (or any other corpora, for that matter) until twenty months old, at which point it is used twelve times by the same child, and once each by two children from the Tong and Zhou 3 corpora. Each child implements a different function of \textit{de} during this period: for example, in (\ref{20mo-vp1}), the child in the Zhou 3 corpus uses it to link a VP \textit{xie zi} 'to write characters' with the NP 'pen.' On the other hand, in (\ref{20mo-poss}) and (\ref{20mo-vp2}), a child from the Zhou 1 corpus uses it in a possessive construction and an adjectival construction respectively. The child from the Tong corpus uses it first to link an adjective to the head NP in (\ref{20mo-adj}).
 
-In eight of the fourteen total utterances containing \textit{de} at 20 months old, \textit{de} occurs in a sentence-final position. In the remaining six non-SF utterances, the head items (i.e. the word which is modified by de) seems to consist of four nouns, one adjective, and one verb.
+In eight of the fourteen total utterances containing \textit{de} at 20 months old, \textit{de} occurs in a sentence-final position. In the remaining six non-SF utterances, the head items (i.e. the word which is modified by \textit{de}) seems to consist of four nouns, one adjective, and one verb. The so-called adjective head item, however, is part of a children's song where the head NP \textit{mama} is recursively modified, first by the adjective \textit{hao} "good" and then by the possessive \textit{wo de} "my". Since this is not an instance of spontaneous production, we will ignore it for the purposes of this analysis. Similarly, in (\ref{20mo-poss}), the item modified by \textit{luyin} "recording" is canonically a verb (and has been coded as such in the original data), however in this context it is being used as a noun.
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
@@ -210,7 +207,7 @@ In eight of the fourteen total utterances containing \textit{de} at 20 months ol
   \end{CJK}
 \end{examples}
 
-Four children in the target corpora seem to have acquired \textit{de} by twenty months old; however, productivity remains limited for at least three of them. The fourth child, whose data comes from the Zhou 1 corpus, appears to have acquired a broader range of uses for \textit{de}: out of the eight utterances, five modify nominals and three occur sentence-finally.
+Four children in the target corpora seem to have acquired \textit{de} by twenty months old; however, productivity remains limited for at least three of them. The fourth child, whose data comes from the Zhou 1 corpus, appears to have acquired a broader range of uses for \textit{de}: out of eight utterances, five modify nominals and three occur sentence-finally, indicating that this child is able to use \textit{de} to modify both a novel NP, as well as one previously established in the discourse.
 
 At twenty-one months, several more children have begun to use \textit{de} in spontaneous speech. The bulk of utterances for this age range consist of possessive constructions; however, there are also a few instances where \textit{de} is paired with an adjective or VP.
 
@@ -222,7 +219,7 @@ At twenty-one months, several more children have begun to use \textit{de} in spo
        big grey wolf DE tail
        \glt "The Big Bad Wolf's tail"
        \glend
-    \item\label{21mo-adj} Zhou1/cs20o.xml (1;09)
+    \item\label{21mo-adj} Zhou1/cs20b.xml (1;09)
       \glll 黑 颜色 的
        hei yanse de
        black color DE
@@ -240,12 +237,43 @@ At twenty-one months, several more children have begun to use \textit{de} in spo
        mommy DE a3 car
        \glt "Mommy's car"
        \glend
+    \item\label{21mo-adj2} Zhou1/cs20o.xml (1;09)
+      \glll 蓝 的 球
+      lan de qiu
+      blue DE ball
+      \glt "Blue ball"
+      \glend
   \end{CJK}
 \end{examples}
 
-Again, approximately half of the 39 utterances containing \textit{de} have it in sentence-final position. At this point, only the possessive construction
+Again, approximately half of the 39 utterances containing \textit{de} have it in sentence-final position. At this point, the possessive construction is mostly used with a pronounced head; when an adjective or verb is paired with \textit{de}, the modified NP is omitted from the discourse. The single exception to this is (\ref{21mo-adj2}), found in the Zhou 1 corpus.
 
-Around their second birthday, we see a considerable decrease in the proportion of sentence-final \textit{de}s for the children in the Tong and Erbaugh corpora, and an increase in their use in the Zhou 3 corpus. The proportion of sentence-final utterances also decreases between the 14, 20, and 21-month-old groups in the Zhou 1 dataset.
+Around their second birthday, we see a considerable decrease in the proportion of sentence-final \textit{de}s for the children in the Tong and Erbaugh corpora, and an increase in their use in the Zhou 3 corpus. The proportion of sentence-final utterances also decreases between the 14, 20, and 21-month-old groups in the Zhou 1 dataset. At the same time, we see the first non-color adjectives ((\ref{23mo-adj1}) and (\ref{23mo-adj2})) appear before \textit{de} in the Tong corpus (though again, these are used exclusively before covert NPs).
+
+\begin{examples}
+  \begin{CJK}{UTF8}{gbsn}
+     \item\label{23mo-adj1} Tong/011017.xml (1;11)
+       \glll 这 小 的
+        zhe xiao de
+        this small DE
+        \glt ""
+        \glend
+      \item\label{23mo-adj2}  Tong/011017.xml (1;11)
+        \glll 臭 的
+         chou de
+         stinky DE
+         \glt ""
+         \glend
+       \item\label{23mo-rec} Erbaugh/Peng/03.xml (1;11)
+         \glll 姐姐 家 的 狗
+          jiejie jia de gou
+          older-sister family DE dog
+          \glt "Older sister's family's dog"
+          \glend
+  \end{CJK}
+\end{examples}
+
+At this point, we also see a recursive possessive structure, elicited by a conversation in which the adult asks "whose family's dog?" Note, however, that only one \textit{de} appears in this context, as relational nouns in Mandarin do not require \textit{de} to mark possession. 
 
 \section{Discussion}
 \subsection{Theoretical Implications}
@@ -289,7 +317,7 @@ Secondly, it is difficult to write a program which will be able to correctly ide
   \end{CJK}
 \end{examples}
 
-Unfortunately, there is no straightforward way to automate this analysis without miscategorizing some utterances. If we were to modify the code to designate all verb-noun-\textit{de} patterns as VP specifiers, then it might falsely categorize utterances like (\ref{v-n-de}), in which case the verb is not a part of the \textit{de} phrase. Future investigations into the production of \textit{de} would do well to consider these issues when collecting and coding the child speech data. 
+Unfortunately, there is no straightforward way to automate this analysis without miscategorizing some utterances. If we were to modify the code to designate all verb-noun-\textit{de} patterns as VP specifiers, then it might falsely categorize utterances like (\ref{v-n-de}), in which case the verb is not a part of the \textit{de} phrase. Future investigations into the production of \textit{de} would do well to consider these issues when collecting and coding the child speech data.
 
 \section{Appendix} \label{code}
 
