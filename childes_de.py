@@ -106,6 +106,7 @@ older_head_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to4
 older_spec_count_data = pd.crosstab(index=data_36to48["age"], columns=data_36to48["preceding_item_type"], normalize="index").reset_index()
 print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
+all_spec_count_data = pd.crosstab(index=data["age"], columns=data["preceding_item_type"], normalize="index").reset_index()
 
 #CREATING PLOT(s)
 import matplotlib.pyplot as plt
