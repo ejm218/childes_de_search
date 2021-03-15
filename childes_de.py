@@ -108,6 +108,15 @@ print(f"Created DF older_head_count_data with {len(older_head_count_data)} rows.
 print(f"Created DF older_spec_count_data with {len(older_spec_count_data)} rows. This is a combination of all relevant corpora containing data from 36-48 months.")
 all_spec_count_data = pd.crosstab(index=data["age"], columns=data["preceding_item_type"], normalize="index").reset_index()
 
+# CALCULATE REGRESSION LINE AKA LINE OF BEST FIT
+from statistics import mean
+def get_regression_line(x ,y ):
+    m = (((mean(x)*mean(y)) - mean(x*y)) /
+         ((mean(x)*mean(x)) - mean(x*x)))
+    b = mean(y) - m*mean(x)
+    regression_line = [(m*value)+b for value in x]
+    return regression_line
+
 #CREATING PLOT(s)
 import matplotlib.pyplot as plt
 print("Now generating plots...")
