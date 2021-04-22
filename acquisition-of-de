@@ -157,7 +157,7 @@ There is an overlap between 24 and 30 months old during which period all the Ton
 Finally, an additional dataset was created containing utterances from children between 36 and 48 months old. These included data from the aforementioned corpora, as well as two additional corpora that can be viewed in Table (\ref{tab:corpora-summary}). This was a particularly robust data set, containing 2,054 total utterances.
 
 \subsection{Data omissions}
-Several types of MOR (part of speech) tags appeared in the initial search for items immediately following \textit{de} that were either incorrectly coded, overlapped with existing tags, or otherwise warranted removal from the dataset. Some results were also collapsed into single categories for ease of analysis, for instance, all verbs with the exception of \textit{shi} were tagged as VP (\textit{shi} was tagged as a copular verb). When \textit{de} was followed by an item tagged as a 'sentence-final particle (SFP),' the utterance was assigned to the 'sentence final' category. Likewise, if \textit{de} was followed by the aspectual marker \textit{le} or a conjunction such as \textit{yinwei} 'because', the utterance was tagged as sentence-final. An 'other' tag was created for infrequent values that occurred only a handful of times in the data. This included items tagged as 'possessive', 'chi', and 'classifier,' among a few others.
+Several types of MOR (part of speech) tags appeared in the initial search for items immediately following \textit{de} that were either incorrectly coded, overlapped with existing tags, or otherwise warranted removal from the dataset. Some results were also collapsed into single categories for ease of analysis, for instance, all verbs with the exception of \textit{shi} were tagged as VP (\textit{shi} was tagged as a copular verb). When \textit{de} was followed by an item tagged as a 'sentence-final particle (SFP),' the utterance was assigned to the 'sentence final' category. Likewise, if \textit{de} was followed by the aspectual marker \textit{le} or a conjunction such as \textit{yinwei} 'because', the utterance was tagged as sentence-final. An 'other' tag was created for infrequent values that occurred only a handful of times in the data. This included items tagged as 'possessive marker' (i.e. in cases where the \textit{de} was repeated), 'chi' (meaning the child's own name), and 'classifier,' among a few others.
 
 \section{Results} % <---------------------------- RESULTS BEGIN HERE ----------------------------------------------------------------------------------
 
@@ -174,7 +174,7 @@ Several types of MOR (part of speech) tags appeared in the initial search for it
   \end{CJK}
 \end{example}
 
-The youngest age at which \textit{de} was used by a child was fourteen months old (see (\ref{14mo-example})); however, this was limited to a single utterance in the Zhou 1 corpus (citation). \textit{De} did not appear again in the same corpus (or any other corpora, for that matter) until twenty months old, at which point it is used twelve times by the same child, and once each by two children from the Tong and Zhou 3 corpora. Each child implements a different function of \textit{de} during this period: for example, in (\ref{20mo-vp1}), the child in the Zhou 3 corpus uses it to link a VP \textit{xie zi} 'to write characters' with the NP 'pen.' On the other hand, in (\ref{20mo-poss}) and (\ref{20mo-vp2}), a child from the Zhou 1 corpus uses it in a possessive construction and an adjectival construction respectively. The child from the Tong corpus uses it first to link an adjective to the head NP in (\ref{20mo-adj}).
+The youngest age at which \textit{de} was used by a child was fourteen months old (see (\ref{14mo-example})); however, this was limited to a single utterance in the Zhou 1 corpus (citation). \textit{De} did not appear again in the same corpus (or any other corpora, for that matter) until twenty months old, at which point it is used twelve times by the same child, and once each by two children from the Tong and Zhou 3 corpora. Each child implements a different function of \textit{de} during this period: for example, in (\ref{20mo-vp1}), the child in the Zhou 3 corpus uses it to link a VP \textit{xie zi} 'to write characters' with the NP 'pen.' On the other hand, in (\ref{20mo-poss}) and (\ref{20mo-vp2}), a child from the Zhou 1 corpus uses it in a possessive construction and an adjectival construction respectively. The child from the Tong corpus uses it first to link an adjective to the (elided) head NP in (\ref{20mo-adj}). Aside from a handful of uses such as these, the vast majority of utterances in all the analyzed corpora  (except for Zhou 1) use \textit{de} sentence-finally. This constitutes an acceptable form of NP ellipsis that is also seen frequently in adult Mandarin; it is common for speakers to elide a NP modified by \textit{de} when the referent has already been established in the discourse, or can be retrieved from context (see e.g. Huang 2011 for a discourse-pragmatic analysis of NP ellipsis in child Mandarin).
 
 In eight of the fourteen total utterances containing \textit{de} at 20 months old, \textit{de} occurs in a sentence-final position. In the remaining six non-SF utterances, the head items (i.e. the word which is modified by \textit{de}) seems to consist of four nouns, one adjective, and one verb. The so-called adjective head item, however, is part of a children's song where the head NP \textit{mama} is recursively modified, first by the adjective \textit{hao} "good" and then by the possessive \textit{wo de} "my". Since this is not an instance of spontaneous production, we will ignore it for the purposes of this analysis. Similarly, in (\ref{20mo-poss}), the item modified by \textit{luyin} "recording" is canonically a verb (and has been coded as such in the original data), however in this context it is being used as a noun.
 
@@ -207,9 +207,9 @@ In eight of the fourteen total utterances containing \textit{de} at 20 months ol
   \end{CJK}
 \end{examples}
 
-Four children in the target corpora seem to have acquired \textit{de} by twenty months old; however, productivity remains limited for at least three of them. The fourth child, whose data comes from the Zhou 1 corpus, appears to have acquired a broader range of uses for \textit{de}: out of eight utterances, five modify nominals and three occur sentence-finally, indicating that this child is able to use \textit{de} to modify both a novel NP, as well as one previously established in the discourse.
+Four children in the target corpora seem to have acquired \textit{de} by twenty months old; however, productivity remains limited for at least three of them. The fourth child, whose data comes from the Zhou 1 corpus, appears to have acquired a broader range of uses for \textit{de}: out of eight utterances, five modify overt nominals and three occur sentence-finally, indicating that this child is able to use \textit{de} to modify both a novel NP, as well as one previously established in the discourse. Furthermore, the items that precede \textit{de} are also varied between adjectives, verbs, and nominals, indicating that the child is able to use \textit{de} productively with several lexical items.
 
-At twenty-one months, several more children have begun to use \textit{de} in spontaneous speech. The bulk of utterances for this age range consist of possessive constructions; however, there are also a few instances where \textit{de} is paired with an adjective or VP.
+At twenty-one months, several more children have begun to use \textit{de} in spontaneous speech. The bulk of utterances for this age range consist of possessive constructions; however, there are also a few instances where \textit{de} is paired with an adjective or VP. Again, these uses tend to come from the same child in the Zhou 1 corpus, while children from the other corpora continue to use \textit{de} with only one type of modifier.
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
@@ -229,12 +229,12 @@ At twenty-one months, several more children have begun to use \textit{de} in spo
        \glll 爸爸 炒 的
         baba chao de
         daddy stirfry DE
-        \glt "Daddy stirfries" / "What Daddy stirfries"
+        \glt "Daddy stirfries" / "[The food that] Daddy stirfries"
         \glend
     \item\label{21mo-poss2} Tong/010822.xml (1;09)
       \glll 妈妈 的 a3 卡
-       mama de a3 ka
-       mommy DE a3 car
+       mama de a ka
+       mommy DE ah car
        \glt "Mommy's car"
        \glend
     \item\label{21mo-adj2} Zhou1/cs20o.xml (1;09)
@@ -247,6 +247,8 @@ At twenty-one months, several more children have begun to use \textit{de} in spo
 \end{examples}
 
 Again, approximately half of the 39 utterances containing \textit{de} have it in sentence-final position. At this point, the possessive construction is mostly used with a pronounced head; when an adjective or verb is paired with \textit{de}, the modified NP is omitted from the discourse. The single exception to this is (\ref{21mo-adj2}), found in the Zhou 1 corpus.
+
+The child from the Tong corpus makes an interesting progression between 20 and 21 months old, in that they switch from using only adjectives at 20 months to using nouns (and one verb) at 21 months old.
 
 Around their second birthday, we see a considerable decrease in the proportion of sentence-final \textit{de}s for the children in the Tong and Erbaugh corpora, and an increase in their use in the Zhou 3 corpus. The proportion of sentence-final utterances also decreases between the 14, 20, and 21-month-old groups in the Zhou 1 dataset. At the same time, we see the first non-color adjectives ((\ref{23mo-adj1}) and (\ref{23mo-adj2})) appear before \textit{de} in the Tong corpus (though again, these are used exclusively before covert NPs).
 
@@ -273,10 +275,13 @@ Around their second birthday, we see a considerable decrease in the proportion o
   \end{CJK}
 \end{examples}
 
-At this point, we also see a recursive possessive structure, elicited by a conversation in which the adult asks "whose family's dog?" Note, however, that only one \textit{de} appears in this context, as relational nouns in Mandarin do not require \textit{de} to mark possession. 
+At this point, we also see a recursive possessive structure, elicited by a conversation in which the adult asks "whose family's dog?" Note, however, that only one \textit{de} appears in this context, as relational nouns in Mandarin do not require overt \textit{de} to mark possession.
 
 \section{Discussion}
+Analysis of corpora from CHILDES reveals a surprisingly consistent acquisition path for the \textit{de} morpheme for Mandarin-speaking children: there is a brief initial phase during which children tend to use \textit{de} with only one specifier type to modify a noun. The exact item type appears to vary by child: the child in the Tong corpus uses only adjectives at 20 months old, whereas in the Zhou 3 corpus, the first \textit{de} utterances at 20 and 21 months contain only nouns. Around this time, there is a shift in the variety of items which appear with \textit{de}, and all children from all corpora begin to use at least three types of specifiers by the time they reach their second birthday.
+
 \subsection{Theoretical Implications}
+Corpus data provides us with valuable insight as to the expected acquisition path for certain linguistic phenomena, which can in turn provide support for theoretical models of these phenomena. The case of \textit{de} is no exception.
 
 \subsection{Limitations}
 While this data provides us with a robust starting point for future discussions of children's use of \textit{de} in Mandarin, there are a few shortcomings that should be noted when interpreting the data presented here. Firstly, the accuracy of the numbers presented here relies on that of the transcribers, as well as the consistency of transcriptions across corpora. Many words in Mandarin, while canonically belonging to one syntactic category, can be used as a different category without any form of morphological marking to indicate that its part of speech has changed. For instance, depending on the persuasion of the transcriber, \textit{shuijiao} in (\ref{vp-ambiguity}) could be tagged as either a noun or a verb. Similarly, some adjectives (especially those denoting color) can be used as a noun (e.g. in (\ref{adj-ambiguity})). It is worth noting that the first uses of adjectival \textit{de} contain a color word. In these instances, it is plausible that the child has identified the color as noun and is using \textit{de} to link two NPs, rather than an adjective and an NP.
@@ -318,6 +323,8 @@ Secondly, it is difficult to write a program which will be able to correctly ide
 \end{examples}
 
 Unfortunately, there is no straightforward way to automate this analysis without miscategorizing some utterances. If we were to modify the code to designate all verb-noun-\textit{de} patterns as VP specifiers, then it might falsely categorize utterances like (\ref{v-n-de}), in which case the verb is not a part of the \textit{de} phrase. Future investigations into the production of \textit{de} would do well to consider these issues when collecting and coding the child speech data.
+
+Limitations aside, this fact highlights something quite shocking in the data: namely, that Mandarin-speaking children produce object relatives as early as two years old, a feat that is unheard of in most Indoeuropean languages.
 
 \section{Appendix} \label{code}
 
