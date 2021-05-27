@@ -1,0 +1,27 @@
+The Erbaugh corpus contains a total of 24,462 child utterances.
+
+The earliest production of de in the Erbaugh corpus occurs at 22 months old, with 23 total findings across the available transcripts. Most of the utterances contain a covert NP or, alternatively, express affirmation of the previous utterance. In many of these cases, the different uses cannot be determined based on the utterance alone. For example, given the utterance below, two possible interpretations can be proposed: if the child is specifying a member of a previously-established set, e.g. "two paintings, one of which the sister painted," then this would be a case where the child has simply omitted the modified NP; on the other hand, if the child is simply repeating or affirming the statement "Sister painted," then they are using de as modal particle. In the second case, it is not being used to designate nominal modification, but rather as a homophonous sentence-final particle that takes scope over the utterance as a whole.
+
+All de utterances from this time period appear to be either affirmations using the modal particle form in some cases, or omissions of the head NP. There are several instances where the child uses an adjectival modifier, such as xiao 'small,' followed by de sentence-finally. The underlying structure of these uses remains somewhat opaque: it could be that the modified NP is generated after de but subsequently moves to SpecIP. This is supported by the fact that an overt NP in a sentence like "这个苹果小小的__" is ungrammatical. Logically, this type of transformation would require the existence of the basic structure in the child's grammar; given the set of productions at this age, however, there is no evidence that the child has acquired (or at least has access to) the modifier + de + NP structure. It seems more likely that, at first, de's sole function is that of an affirmation particle.
+
+At 23 months, however, the number of de utterances effectively doubles (N = 42) with two overt NP heads. The remaining utterances (N = 40) contain sentence-final de.
+
+Erbaugh/Peng/03.xml (1;11)
+姐姐家的狗
+
+Erbaugh/Peng/04.xml (1;11)
+姐姐在校的奖品
+
+Both of these productions are direct imitations of adult speech, and given the scarcity, it seems reasonable to conclude that the modification function of de is not yet available to the child at 23 months old.
+
+The number of utterances containing de more than triples between 23 and 24 months old, with 155 listed in the Erbaugh corpus at 24 months. At this point, we begin to see consistent use of de in non-sentence final positions, as well as with overt NPs. There are 21 such utterances in this data set, with 13 different NP tokens. Nearly of these are possessive phrases, e.g. 我的汽车, 我的爸爸, but one is clearly adjectival.
+
+  Erbaugh/Laohu/02.xml (2;0)
+  我的汽车
+
+  Erbaugh/Peng/05.xml (2;0)
+  哇好厉害的船
+
+The number of utterances produced at 25 months and thereafter decreases drastically; there are a few possible explanations for this. One option is that, as seen in previous research, after discovering a new structure in their language, the child experiences a period of intense fixation and over-produces the target structure. If this is the case, we might expect the number of de utterances to make up a considerably larger proportion of the speech acts compared with subsequent months. 
+
+len(erbaugh_data.loc[erbaugh_data["age"] == 24]) / len(erbaugh.sents(fileids="Erbaugh/Peng/05.xml", speaker="CHI"))
