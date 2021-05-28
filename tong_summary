@@ -1,0 +1,9 @@
+The proportion of de structures used in the Tong child's utterances increases over the span of development. 
+
+len(tong_data.loc[tong_data["age"] == 24]) / (len(tong.sents(fileids="Tong/020019.xml", speaker="CHI")))
+
+len(tong_data.loc[tong_data["age"] == 26]) / (len(tong.sents(fileids="Tong/020216.xml", speaker="CHI")))
+
+len(tong_data.loc[tong_data["age"] == 27]) / (len(tong.sents(fileids="Tong/020314.xml", speaker="CHI")))
+
+tong_data.loc[tong_data["age"] == 20]["filename"].value_counts()

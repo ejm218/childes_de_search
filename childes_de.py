@@ -183,4 +183,9 @@ plt.ylabel("Types of items following 'de'")
 plt.title("Items following 'de' in the Erbaugh, Tong, Zhou 3 corpora (combined)")
 plt.savefig("etz_heads.png")
 
-# number of des produced over time
+# Add a column to the Tong DF that contains total number of utterances for the file
+for i in tong_data["age"].values:
+    fileid = tong_data.loc[tong_data["age"] == i]["filename"].values[0]
+    proportion_de = int(tong_data["filename"].value_counts()[fileid]) / len(tong.sents(fileids=fileid, speaker="CHI"))
+    for i in tong_data:
+        tong_data["de_proportion"][i] = proportion_de
