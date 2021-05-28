@@ -183,6 +183,11 @@ plt.ylabel("Types of items following 'de'")
 plt.title("Items following 'de' in the Erbaugh, Tong, Zhou 3 corpora (combined)")
 plt.savefig("etz_heads.png")
 
+# Erbaugh total number of entries per age 
+erbaugh_total_monthly = dict()
+for i in set(erbaugh_data["age"].values):
+	erbaugh_total_monthly[i] = len(erbaugh_data.loc[erbaugh_data["age"] == i])
+
 # Add a column to the Tong DF that contains total number of utterances for the file
 for i in tong_data["age"].values:
     fileid = tong_data.loc[tong_data["age"] == i]["filename"].values[0]
