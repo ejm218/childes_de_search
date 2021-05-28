@@ -138,3 +138,14 @@ def multicorpus_search_MOR(corpus_list, search_term, target_speaker="CHI", inclu
                             corpus_search_results["preceding_utterance"] = []
                             corpus_search_results["preceding_utterance"].append(corpus_name.sents(transcript)[(int(sentence_index - 1))])
     return corpus_search_results
+
+def total_utterances(corpus_list, speaker):
+    """Returns a data frame containing the total number of utterances by a given speaker in each corpus file."""
+    utterance_count_df = pd.DataFrame(columns = ["filename", "utterances"])
+    for corpus_name in corpus_list:
+        transcripts = corpus_name.fileids()
+        for transcript in transcripts:
+            sentences = corpus_name.sents(transcript, speaker=speaker)
+            utterance_count_df["filename"].append(transcript)
+            utterance_count_df["utterances"].append(len(sentences))
+    return utterance_count_df
