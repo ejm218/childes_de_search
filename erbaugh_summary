@@ -22,6 +22,58 @@ The number of utterances containing de more than triples between 23 and 24 month
   Erbaugh/Peng/05.xml (2;0)
   哇好厉害的船
 
-The number of utterances produced at 25 months and thereafter decreases drastically; there are a few possible explanations for this. One option is that, as seen in previous research, after discovering a new structure in their language, the child experiences a period of intense fixation and over-produces the target structure. If this is the case, we might expect the number of de utterances to make up a considerably larger proportion of the speech acts compared with subsequent months. 
+The number of utterances produced at 25 months and thereafter decreases drastically; there are a few possible explanations for this. One option is that, as seen in previous research on other acquisition types, after discovering a new structure in their language, the child experiences a period of intense fixation and over-produces the target structure. If this is the case, we might expect the number of de utterances to make up a considerably larger proportion of the speech acts compared with subsequent months.
 
-len(erbaugh_data.loc[erbaugh_data["age"] == 24]) / len(erbaugh.sents(fileids="Erbaugh/Peng/05.xml", speaker="CHI"))
+len(erbaugh_data.loc[erbaugh_data["age"] == 24]) / (len(erbaugh.sents(fileids="Erbaugh/Peng/05.xml", speaker="CHI")) + len(erbaugh.sents(fileids="Erbaugh/Peng/06.xml", speaker="CHI")))
+>>> 0.15469061876247506
+
+len(erbaugh_data.loc[erbaugh_data["age"] == 25]) / (len(erbaugh.sents(fileids="Erbaugh/Peng/06.xml", speaker="CHI")))
+>>> 0.09578544061302682
+# most utterances from Peng/06 but there were also some from Laohu6 and 7
+
+len(erbaugh_data.loc[erbaugh_data["age"] == 27]) / (len(erbaugh.sents(fileids="Erbaugh/Peng/11.xml", speaker="CHI")))
+>>> 0.08658008658008658
+
+At 29 months old, one child in the Erbaugh corpus uses de with several of different NPs. Although the majority of utterances (about 69%) still contain sentence-final de, a manual inspection of the data demonstrates that a number of these can potentially be categorized as cases of NP ellipsis, rather than affirmation.
+
+At the same time, there is some evidence that the child's productivity remains limited. For example:
+
+Peng/13.xml (2;05)
+ADU1: 你 现在 要 做 什么
+CHI: 要 做 屋顶 .
+CHI: 睡觉 的 .
+ADU1: 要 做 睡觉 的 屋顶 啊 ?
+CHI: 嗯 .
+CHI: 它 要 睡觉 的 .
+
+In this dialogue, again, the first use of de by the child is unclear. It could be that ellipsis has occurred, or that the child is using de as a particle (which is clearly the case for the last utterance). Worth noting is that there appears to be some level of avoidance of the adult structure, where a VP modifies the target NP. In one case, though, the child successfully produces an object relative clause:
+
+Peng/13 (2;05)
+ADU1: 那 是 什么 ? ▶
+"What's that?"
+CHI: 头 . ▶
+"A head"
+ADU1: 头 是 什么 头 啊 ? ▶
+"What head?"
+CHI: 我 切 开 来 的 头 .
+"The head I cut off"
+
+This is the only time that the child produces such a construction at this age, however. At 30 months, the same child again produces two object relatives, one of which is more adultlike than the other:
+
+Peng/14 (2;06)
+ADU1: 那 是 谁 画 的 xxx .
+CHI: 不 晓得 谁 画 的 蛇 .
+
+Peng/15 (2;06)
+ADU1: 这个 是 什么 东西 啊 ?
+CHI: 这 是 椅子 .
+ADU1: 椅子 啊 ?
+CHI: 这 是 睡觉 的 地方 .
+ADU1: 那 是 睡觉 的 椅子 啊 ? ▶
+CHI: 嗯 . ▶
+
+There is another increase in the total number of utterances from this corpus around 31 and 32 months old. At 31 months, exactly half of the utterances include a non-SF de (77 out of 154 total),  compared with just over 30% of non-SF productions at 29 months.
+
+Almost 38% of the utterances at 32 months are non-SF. 42% for 33 months, 47% for 34 months, 40% for 35 months, etc...
+
+All of the occurrences at 37 months come from the "Kang" dataset, and many seem to employ a similar formula; namely, the child uses a relativized IP with the determiner 那个 'that one' 
