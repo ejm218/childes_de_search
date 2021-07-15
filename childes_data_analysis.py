@@ -12,7 +12,48 @@ functions_file = functions_file.read()
 exec(functions_file)
 data = pd.read_csv("full_data.csv")
 
-# SUBSETS
+#Change tags for different categories of nouns
+np_search = "n:?[a-z]*|pro:?[a-z]*" # finds all nouns and pronouns
+vp_search = "v:?[a-z]*" # finds all verbs
+
+data = data.replace({"preceding_item_type": np_search}, "NP", regex=True)
+data = data.replace({"succeeding_item_type": np_search}, "NP", regex=True)
+data = data.replace({"preceding_item_type": vp_search}, "VP", regex=True)
+data = data.replace({"succeeding_item_type": vp_search}, "VP", regex=True)
+data = data.loc[data["succeeding_item_type"] != "poss"]
+data = data.loc[data["succeeding_item_type"] != "chi"]
+data = data.loc[data["succeeding_item_type"] != "cl"]
+
+# Change tags for things that come after de
+data.loc[data["succeeding_item_type"] == "", "succeeding_item_type"] = "sfp"
+data.loc[data["succeeding_item"] == "是", "succeeding_item_type"] = "cop"
+data.loc[data["succeeding_item_type"] == "sfp", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "adVP", "succeeding_item_type"] = "adv"
+data.loc[data["succeeding_item_type"] == "co", "succeeding_item_type"] = "det"
+data.loc[data["succeeding_item_type"] == "co:iNP", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "coNP", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "asp", "succeeding_item_type"] = "NA"
+data.loc[data["succeeding_item_type"] == "quaNP", "succeeding_item_type"] = "adj"
+
+# Change tags for items that come before de
+data.loc[data["preceding_item"] == "是", "preceding_item_type"] = "cop"
+data.loc[data["preceding_item_type"] == "sfp", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "co", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "co:iNP", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "coNP", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "asp", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "quaNP", "preceding_item_type"] = "adj"
+data.loc[data["preceding_item_type"] == "L2", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "poss", "preceding_item_type"] = "adj"
+data.loc[data["preceding_item_type"] == "", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "cl", "preceding_item_type"] = "adj"
+data.loc[data["preceding_item_type"] == "cleft", "preceding_item_type"] = "other"
+data.loc[data["preceding_item_type"] == "oNP", "preceding_item_type"] = "other"
+
+# SEPARATE DATA INTO SFP AND NON-SFP
+#non_sfp_data = data[data.succeeding_item_type != "NA"]
+
+# CORPORA SUBSETS
 tong_data = data[data.filename.str.contains("Tong.*")==True]
 print(f"There are {len(tong_data)} de utterances in the Tong dataset.")
 erbaugh_data = data[data.filename.str.contains("Erbaugh.*")==True]
@@ -131,14 +172,14 @@ plt.ylabel("Types of items following 'de'")
 plt.title("Items following 'de' in the Erbaugh, Tong, Zhou 3 corpora (combined)")
 plt.savefig("etz_heads.png")
 
-# Erbaugh total number of entries per age 
+# Erbaugh total number of entries per age
 erbaugh_total_monthly = dict()
 for i in set(erbaugh_data["age"].values):
 	erbaugh_total_monthly[i] = len(erbaugh_data.loc[erbaugh_data["age"] == i])
 
 # Add a column to the Tong DF that contains total number of utterances for the file
-for i in tong_data["age"].values:
-    fileid = tong_data.loc[tong_data["age"] == i]["filename"].values[0]
-    proportion_de = int(tong_data["filename"].value_counts()[fileid]) / len(tong.sents(fileids=fileid, speaker="CHI"))
-    for i in tong_data:
-        tong_data["de_proportion"][i] = proportion_de
+#for i in tong_data["age"].values:
+#    fileid = tong_data.loc[tong_data["age"] == i]["filename"].values[0]
+#    proportion_de = int(tong_data["filename"].value_counts()[fileid]) / len(tong_data.sents(fileids=fileid, speaker="CHI"))
+#    for i in tong_data:
+#        tong_data["de_proportion"][i] = proportion_de
