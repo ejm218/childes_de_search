@@ -7,7 +7,7 @@ from nltk.corpus.reader import CHILDESCorpusReader
 from collections import Counter
 import pandas as pd
 os.chdir("/Users/academic/Documents/childes_de_search")
-functions_file = open("childes_search.py", "r")
+functions_file = open("childes_search_functions.py", "r")
 functions_file = functions_file.read()
 exec(functions_file)
 data = pd.read_csv("full_data.csv")
