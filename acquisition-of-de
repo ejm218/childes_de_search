@@ -149,7 +149,7 @@ A corpus search was conducted using six corpora available via the CHILDES databa
 
 The Erbaugh, Tong, and Zhou 3 corpora contain data from longitudinal studies of one or more Mandarin-acquiring children. The Erbaugh and Tong studies collected data approximately once a month for the duration of the study; the Zhou 3 authors collected data each month when the target child was between 20 and 30 months old, and then decreased the frequency to about every other month when the child was between 30 and 50 months old. After that, the frequency decreased further; however, the later data is not included in the present analysis.
 
-The Zhou 1, Zhou 2, and Li Zhou corpora are cross-sectional studies conducted with a number of Mandarin-speaking children at kindergartens across Mainland China. The data in each of these corpora was collected during a single recording session. Thus, unlike the first three corpora, these data do not reflect the acquisition path for a single child, but are intended to reveal more general trends across age groups. The Zhou 1 corpus contains data from groups of 14, 20, 26, and 32 month old children. Likewise, the Zhou 2 corpus divides its data into seven age groups: 36, 42, 48, 54, 60, 66, and 72 months old. The Li Zhou corpus contains data for children between ages three and six. In all cases, however, only data for children less than or equal to 48 months old were included.
+The Zhou 1, Zhou 2, and Li Zhou corpora are cross-sectional studies conducted with a number of Mandarin-speaking children at kindergartens across Mainland China. The data in each of these corpora was collected during a single recording session. Thus, unlike the first three corpora, these data do not reflect the acquisition path for a single child, but are intended to reveal more general trends across age groups. The Zhou 1 corpus contains data from groups of 14, 20, 26, and 32 month old children. Likewise, the Zhou 2 corpus divides its data into seven age groups: 36, 42, 48, 54, 60, 66, and 72 months old. The Li Zhou corpus contains data for children between ages three and six. In both cases, however, only data for children less than or equal to 48 months old were included.
 
 The analysis was run in Python (version 3.8.7), using Natural Language Toolkit (NLTK, version 3.5)'s built-in corpus reader functionality for CHILDES. XML files for each database were downloaded manually from the TalkBank website and searched using a program written in Python (see \ref{code} for more detailed information). Further analysis was carried out using the NumPy, Pandas (1.2.1), and Matplotlib packages.
 
@@ -208,7 +208,7 @@ In the remaining six non-SF utterances, the head items (i.e. the word which is m
        \glll 这 个 是 插 的
         zhe ge shi cha de
         this CL be insert DE
-        \glt 'This is the one that plugs in'
+        \glt 'This is the one that plugs in' / `This plugs in'
         \glend
     \item\label{20mo-adj} Tong/010718.xml (1;08)
       \glll 白色 的
@@ -219,9 +219,11 @@ In the remaining six non-SF utterances, the head items (i.e. the word which is m
   \end{CJK}
 \end{examples}
 
-Four children in the target corpora seem to have acquired some form of \textit{de} by twenty months old; however, productivity remains limited for at least three of them. The fourth child, whose data comes from the Zhou 1 corpus, appears to have acquired a broader range of uses for \textit{de}: out of eight utterances, five modify overt nominals and three occur sentence-finally, indicating that this child is able to use \textit{de} to modify both a novel NP, as well as one previously established in the discourse. Furthermore, the items that precede \textit{de} are also varied between adjectives, verbs, and nominals, suggesting that the child is able to use \textit{de} productively with several lexical items.
+Four children in the target corpora seem to have acquired some form of \textit{de} by twenty months old; however, productivity remains limited for at least three of them. The fourth child, whose data comes from the Zhou 1 corpus, appears to have acquired a broader range of uses for \textit{de}: out of eight utterances, five modify overt nominals and three occur sentence-finally, indicating that this child is able to use \textit{de} to modify both a novel NP, as well as one previously established in the discourse. Furthermore, the items that precede \textit{de} are also varied between adjectives, verbs, and nominals, suggesting that the child is able to use \textit{de} productively with several lexical items. The complete list of utterances from this child can be seen in \ref{}.
 
-At twenty-one months, several more children have begun to use \textit{de} in spontaneous speech. The bulk of utterances for this age range consist of possessive constructions; however, there are also a few instances where \textit{de} is paired with an adjective or VP. Again, the variety of uses tend to come from the same child in the Zhou 1 corpus, while children from the other corpora continue to use \textit{de} with only one type of modifier.
+
+
+At twenty-one months, several more children have begun to use \textit{de} in spontaneous speech. The bulk of utterances for this age range consist of possessive constructions; however, there are also a few instances where \textit{de} is paired with an adjective or VP. Again, the variety of uses tend to come from the same child in the Zhou 1 corpus, while children from the other corpora continue to use \textit{de} with only one type of modifier, or as a SFP.
 
 \begin{examples}
   \begin{CJK}{UTF8}{gbsn}
